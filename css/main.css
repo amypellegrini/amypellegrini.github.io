@@ -107,10 +107,13 @@ hr {
 
 ul li {
   list-style-type: none;
+  line-height: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-  padding-top: 2em;
+  padding-top: 2rem;
 }
 
 .testimonials .comment {
