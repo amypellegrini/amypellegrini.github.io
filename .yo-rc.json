@@ -4,7 +4,7 @@
     "props": {
       "framework": "angular2",
       "modules": "webpack",
-      "js": "babel",
+      "js": "typescript",
       "ci": [],
       "css": "scss",
       "resolved": "C:\\Users\\Amy\\AppData\\Roaming\\npm\\node_modules\\generator-fountain-webapp\\node_modules\\generator-fountain-angular2\\generators\\app\\index.js",
@@ -14,7 +14,7 @@
         "cooked": [],
         "original": []
       },
-      "sample": "techs",
+      "sample": "todoMVC",
       "router": "router"
     }
   }

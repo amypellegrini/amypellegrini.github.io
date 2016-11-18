@@ -8,14 +8,6 @@ const autoprefixer = require('autoprefixer');
 
 module.exports = {
   module: {
-    preLoaders: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'eslint'
-      }
-    ],
-
     loaders: [
       {
         test: /.json$/,
@@ -31,10 +23,10 @@ module.exports = {
         })
       },
       {
-        test: /\.js$/,
+        test: /\.ts$/,
         exclude: /node_modules/,
         loaders: [
-          'babel'
+          'ts'
         ]
       },
       {
@@ -69,5 +61,20 @@ module.exports = {
     path: path.join(process.cwd(), conf.paths.dist),
     filename: '[name]-[hash].js'
   },
-  entry: `./${conf.path.src('index')}`
+  resolve: {
+    extensions: [
+      '',
+      '.webpack.js',
+      '.web.js',
+      '.js',
+      '.ts'
+    ]
+  },
+  entry: `./${conf.path.src('index')}`,
+  ts: {
+    configFileName: 'tsconfig.json'
+  },
+  tslint: {
+    configuration: require('../tslint.json')
+  }
 };

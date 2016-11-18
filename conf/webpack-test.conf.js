@@ -4,9 +4,9 @@ module.exports = {
   module: {
     preLoaders: [
       {
-        test: /\.js$/,
+        test: /\.ts$/,
         exclude: /node_modules/,
-        loader: 'eslint'
+        loader: 'tslint'
       }
     ],
 
@@ -18,10 +18,10 @@ module.exports = {
         ]
       },
       {
-        test: /\.js$/,
+        test: /\.ts$/,
         exclude: /node_modules/,
         loaders: [
-          'babel'
+          'ts'
         ]
       },
       {
@@ -39,5 +39,20 @@ module.exports = {
     )
   ],
   debug: true,
-  devtool: 'source-map'
+  devtool: 'source-map',
+  resolve: {
+    extensions: [
+      '',
+      '.webpack.js',
+      '.web.js',
+      '.js',
+      '.ts'
+    ]
+  },
+  ts: {
+    configFileName: 'tsconfig.json'
+  },
+  tslint: {
+    configuration: require('../tslint.json')
+  }
 };

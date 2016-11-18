@@ -9,9 +9,9 @@ module.exports = {
   module: {
     preLoaders: [
       {
-        test: /\.js$/,
+        test: /\.ts$/,
         exclude: /node_modules/,
-        loader: 'eslint'
+        loader: 'tslint'
       }
     ],
 
@@ -32,10 +32,10 @@ module.exports = {
         ]
       },
       {
-        test: /\.js$/,
+        test: /\.ts$/,
         exclude: /node_modules/,
         loaders: [
-          'babel'
+          'ts'
         ]
       },
       {
@@ -64,5 +64,20 @@ module.exports = {
     path: path.join(process.cwd(), conf.paths.tmp),
     filename: 'index.js'
   },
-  entry: `./${conf.path.src('index')}`
+  resolve: {
+    extensions: [
+      '',
+      '.webpack.js',
+      '.web.js',
+      '.js',
+      '.ts'
+    ]
+  },
+  entry: `./${conf.path.src('index')}`,
+  ts: {
+    configFileName: 'tsconfig.json'
+  },
+  tslint: {
+    configuration: require('../tslint.json')
+  }
 };
