@@ -1,24 +1,26 @@
 This is how a typical JavaScript web application is bootstrapped.
 
-## The CLI
-
-It is not recommended to run commands directly from the cli using global installation of these dependencies, as commands running globally from different paths may have problems with path resolution, or it may run a different version of the depenency required in the project.
-
-## Git
-
-Git is a source control versioning tool.
-
-### .gitignore
-
-There are files you don't want to commit to source control.
-
 ## JavaScript
 
-## Node.js
+## Node.js and NPM
 
 ## yarn
 
 Yarn is a package manager for Node.js projects.
+
+## Setting up a CLI for your project (npm scripts)
+
+The acronym CLI stands for Command Line Interface. Setting up a CLI is important because it allows you to interact directly with your program and set the pre-requisites for automation, by exposing an API that allows your program to interact with a host environment.
+
+It is not recommended to run commands directly from the CLI using global installation of these dependencies, as commands running globally from different paths may have problems with path resolution, or it may run a different version of the depenency required in the project.
+
+## Git
+
+Git is a source control and versioning tool.
+
+### .gitignore
+
+There are files you don't want to commit to source control.
 
 ## prettier
 
@@ -30,9 +32,6 @@ Prettier is a style checker for JavaScript. Enforces the use of style convention
 
 Eslint is a syntax checker for JavaScript. It checks the syntax of the code in search of common errors.
 
-## TypeScript
+## flow
 
-TypeScript is a type checker for JavaScript.
-
-Run:
-./node_modules/.bin/eslint --init
+## Flow/Eslint/Prettier/Visual Studio Code integration
