@@ -1,13 +1,19 @@
 body {
   background-color: #211f23;
+  background-image: url(https://ik.imagekit.io/jptv/amypellegrini/amy-website-cover.jpg);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: right;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 75vh;
+  height: 100vh;
 }
 
 header {
+  position: relative;
+  top: -10vh;
   color: #ffc600;
   text-align: center;
 }
