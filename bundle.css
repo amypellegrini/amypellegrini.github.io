@@ -2,10 +2,11 @@ body {
   background-color: #eeeeee;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   padding: 0;
+  margin: 0;
+  color: #333333;
 }
 
 a {
-  text-decoration: none;
   color: #333333;
 }
 
@@ -13,14 +14,39 @@ a:hover {
   text-decoration: underline;
 }
 
-header h1 {
-  font-family: "Oswald", sans-serif;
-  font-weight: 500;
-  letter-spacing: 1px;
+h1 {
+  font-family: "Bebas Neue", sans-serif;
   text-transform: uppercase;
   font-size: 2rem;
   line-height: 2.4rem;
   margin: 0;
+}
+
+h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 2rem;
+  margin-top: 14px;
+  border-bottom: 3px solid #cc0000;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  margin: 1rem 0 0;
+  font-size: 1.6rem;
+  font-family: "EB Garamond", "Georgia", "Times New Roman", serif;
+}
+
+p {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+article ul li p {
+  color: #666666;
+  font-family: "EB Garamond", "Georgia", "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 600;
 }
 
 ul {
@@ -48,10 +74,10 @@ header {
 
 header .subtitle {
   margin: 0;
-  font-family: "Old Standard TT", serif;
+  font-family: "EB Garamond", serif;
   font-weight: 400;
   font-style: italic;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 header .header-image {
@@ -72,28 +98,35 @@ header .header-image img {
   height: 25px;
 }
 
+.aside {
+  padding: 10px;
+}
+
 @media screen and (min-width: 768px) {
   body {
-    padding: 0 5vw;
+    display: flex;
+    gap: 4rem;
   }
 
   ul.social-list {
     margin-top: 2rem;
-    margin-left: 38px;
+    margin-left: 28px;
   }
 
   header .header-image {
     margin-right: 10px;
-    height: 100px;
-    width: 100px;
+    height: 85px;
+    width: 85px;
   }
 
   header h1 {
+    padding-top: 6px;
     font-size: 3.6rem;
-    line-height: 4rem;
+    line-height: 3rem;
   }
 
   header .subtitle {
+    line-height: 1.8rem;
     font-size: 1.6rem;
   }
 }

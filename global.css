@@ -1,0 +1,158 @@
+body {
+  font-family: "EB Garamond", "Georgia", "Times New Roman", serif;
+  background-color: #f1f1f1;
+  color: #222;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0 20% 20%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+h1 {
+  letter-spacing: 1px;
+  font-family: "Bebas Neue", sans-serif;
+  grid-column: span 12;
+  border-bottom: 3px solid #cc0000;
+  line-height: 2.8rem;
+  font-size: 2.8rem;
+  padding-top: 1.4rem;
+}
+
+header p {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin: 0;
+}
+
+h2,
+h3 {
+  grid-column: span 12;
+  font-family: "Oswald", sans-serif;
+}
+
+h2 {
+  padding-top: 1.4rem;
+  letter-spacing: 1px;
+  grid-column: span 12;
+}
+
+.info {
+  padding: 10px 20px 20px;
+  background-color: #e1e1e1;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.info p {
+  font-size: 1.2rem;
+}
+
+p {
+  grid-column: span 12;
+  margin: 0;
+}
+
+.pt-0 {
+  padding-top: 0;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.grid-col-4-11 {
+  grid-column: 4 / 11;
+}
+
+.grid-col-5-10 {
+  grid-column: 5 / 10;
+}
+
+.grid-12 {
+  grid-column: span 12;
+}
+
+.grid-11 {
+  grid-column: span 11;
+}
+
+.grid-10 {
+  grid-column: span 10;
+}
+
+.grid-9 {
+  grid-column: span 9;
+}
+
+.grid-8 {
+  grid-column: span 8;
+}
+
+.grid-7 {
+  grid-column: span 7;
+}
+
+.grid-6 {
+  grid-column: span 6;
+}
+
+.grid-5 {
+  grid-column: span 5;
+}
+
+.grid-4 {
+  grid-column: span 4;
+}
+
+.grid-3 {
+  grid-column: span 3;
+}
+
+.grid-2 {
+  grid-column: span 2;
+}
+
+.image-label {
+  margin: 0;
+  font-size: 1.3rem;
+  font-style: italic;
+  font-weight: 500;
+  text-align: center;
+}
+
+.info .attribution,
+.attribution {
+  font-size: 1rem;
+  margin-top: 1.4rem;
+}
+
+.grid-image {
+  grid-column: span 6;
+}
+
+.grid-text {
+  grid-column: span 6;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.sheet-music-wrapper {
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
