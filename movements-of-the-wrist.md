@@ -58,7 +58,7 @@ Ulnar and radial deviation involves bending the wrist laterally, left or right (
   <p class="image-label">Fig. 7: Radial deviation.</p>
 </div>
 
-<div class="grid grid-5 info">
+<div class="grid grid-12 lg-grid-5 info">
   <h3>Ulna and radius bones</h3>
   <p>The terms “ulnar” and “radial” are associated with the bones in the forearm, the ulna and the radius, to where each movement is directed (fig. 8).</p>
   <img class="grid-12" src="../images/Radius_and_Ulna_-_Forearm_Bones.jpg" alt="Ulnar and radial deviation" width="100%" />
@@ -66,7 +66,7 @@ Ulnar and radial deviation involves bending the wrist laterally, left or right (
   <p class="attribution">By DrJanaOfficial - Own work, CC BY-SA 4.0, <a target="_blank" href="https://commons.wikimedia.org/w/index.php?curid=86122637">https://commons.wikimedia.org/w/index.php?curid=86122637</a></p>
 </div>
 
-<div class="grid grid-7">
+<div class="grid grid-12 lg-grid-7">
   <h2 class="pt-0">Neutral position</h2>
   <p>When there is no flexion, extension, ulnar or radial deviation, we refer to this position as “neutral”. In the neutral position, the wrist is not bent in any direction, and there is a straight (or almost straight line) running from the forearm through the wrist, to the hand and the third finger (fig. 9). We can consider the third finger as a point of reference for the “middle” of the hand.</p>
   <div class="grid-12">

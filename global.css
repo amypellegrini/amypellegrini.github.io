@@ -5,7 +5,7 @@ body {
   font-size: 1.4rem;
   line-height: 1.5;
   margin: 0;
-  padding: 0 20% 20%;
+  padding: 0 10px;
 }
 
 .grid {
@@ -155,4 +155,32 @@ p {
   background-color: #ffffff;
   border: 1px solid #ccc;
   border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding: 0 5% 10%;
+  }
+
+  .md-grid-5 {
+    grid-column: span 5;
+  }
+
+  .md-grid-7 {
+    grid-column: span 7;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    padding: 0 10% 10%;
+  }
+
+  .lg-grid-5 {
+    grid-column: span 4;
+  }
+
+  .lg-grid-7 {
+    grid-column: span 8;
+  }
 }
