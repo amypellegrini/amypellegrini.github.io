@@ -36,3 +36,4 @@ jobs:
           folder: "_site/"
           bucket: ${{ secrets.AWS_S3_BUCKET }}
           dist-id: ${{ secrets.AWS_CLOUDFRONT_DIST_ID }}
+          invalidation: "/*"
