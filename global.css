@@ -8,26 +8,34 @@ body {
   padding: 0 10px;
 }
 
+main > * {
+  max-width: 45rem;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+.stack > * + * {
+  margin-block-start: 1.5rem;
+}
+
+img + .image-label,
+.sheet-music-wrapper + .image-label {
+  margin-block-start: 0.5rem;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 20px;
 }
 
-h1,
-h2,
-h3 {
-  margin: 0;
-}
-
 h1 {
   letter-spacing: 1px;
   font-family: "Bebas Neue", sans-serif;
-  grid-column: span 12;
   border-bottom: 3px solid #cc0000;
   line-height: 2.8rem;
   font-size: 2.8rem;
-  padding-top: 1.4rem;
 }
 
 header p {
@@ -38,12 +46,10 @@ header p {
 
 h2,
 h3 {
-  grid-column: span 12;
   font-family: "Oswald", sans-serif;
 }
 
 h2 {
-  padding-top: 1.4rem;
   letter-spacing: 1px;
   grid-column: span 12;
 }
@@ -53,15 +59,11 @@ h2 {
   background-color: #e1e1e1;
   border-radius: 5px;
   border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 
 .info p {
   font-size: 1.2rem;
-}
-
-p {
-  grid-column: span 12;
-  margin: 0;
 }
 
 .pt-0 {
@@ -125,7 +127,6 @@ p {
 }
 
 .image-label {
-  margin: 0;
   font-size: 1.3rem;
   font-style: italic;
   font-weight: 500;
@@ -155,6 +156,7 @@ p {
   background-color: #ffffff;
   border: 1px solid #ccc;
   border-radius: 5px;
+  box-sizing: border-box;
 }
 
 @media screen and (min-width: 768px) {
