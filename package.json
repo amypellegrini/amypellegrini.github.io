@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Amy Pellegrini Website",
   "main": "_site",
-  "dependencies": {},
+  "dependencies": {
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1"
   },
