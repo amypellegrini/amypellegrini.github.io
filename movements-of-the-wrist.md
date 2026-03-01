@@ -32,7 +32,7 @@ title: Movements of the Wrist &mdash; Anatomy for Pianists &middot; Amy Pellegri
 <article class="article-body">
   <div class="container">
 
-<h2>Introduction</h2>
+<h2 id="introduction">Introduction</h2>
 
 In this lesson I'll discuss some hand gestures known as flexion, extension, ulnar and radial deviation of the wrist. Understanding these concepts will help you reduce excess effort, and improve your ability to perform more demanding passages while reducing the risk of injury. Having said this, if you want to dive deeper into the anatomical aspects of the wrist, I'd recommend asking a physiotherapist or relevant health professional.
 
@@ -45,7 +45,7 @@ When describing the gestures, I will do so from the perspective of a pianist sit
 
 Please note that the anatomy of each person is different, and not two hands are the same. The advice of which movement to use for a given scenario may differ from person to person, even when referring to the same passage and fingering.
 
-<h2>Flexion and extension</h2>
+<h2 id="flexion-and-extension">Flexion and extension</h2>
 
 Flexion is the anatomical action of bending or decreasing the angle between two body parts. Extension is increasing the angle between two body parts. For example, when you close your hand to make a fist, you are "flexing" the fingers towards the palm (fig. 2). When you open your hand and straighten your fingers, you are "extending" your fingers away from your palm (fig. 3).
 
@@ -73,7 +73,7 @@ Flexion and extension of the wrist refer to reducing or increasing the angle bet
   </div>
 </div>
 
-<h2>Ulnar and radial deviation</h2>
+<h2 id="ulnar-and-radial-deviation">Ulnar and radial deviation</h2>
 
 Ulnar and radial deviation involves bending the wrist laterally, left or right (again assuming your palm and forearm are parallel to the floor). Ulnar deviation means bending the wrist to the side of the little finger, while radial deviation is bending the wrist to the side of the thumb (figs. 6 and 7).
 
@@ -101,7 +101,7 @@ Ulnar and radial deviation involves bending the wrist laterally, left or right (
   </p>
 </div>
 
-<h2>Neutral position</h2>
+<h2 id="neutral-position">Neutral position</h2>
 
 When there is no flexion, extension, ulnar or radial deviation, we refer to this position as "neutral". In the neutral position, the wrist is not bent in any direction, and there is a straight (or almost straight line) running from the forearm through the wrist, to the hand and the third finger (fig. 9). We can consider the third finger as a point of reference for the "middle" of the hand.
 
@@ -114,7 +114,7 @@ This is generally considered the safest and most comfortable resting position fo
 
 The voluntary exertion of any of the movements we described (flexion, extension, ulnar and radial deviation) will require the activation of different muscle groups in order to move the wrist away from a neutral position. This should not be confused with the wrist being bent as a consequence of gravity, in which case the movement is not caused by the action of the muscles.
 
-<h2>Wrist deviation at the piano</h2>
+<h2 id="wrist-deviation-at-the-piano">Wrist deviation at the piano</h2>
 
 <div class="content-split content-split--text-wide">
   <div class="figure">
@@ -166,7 +166,7 @@ With the right hand, the opposite is true: radial deviation is more prominent wh
   </p>
 </div>
 
-<h2>A real life example</h2>
+<h2 id="a-real-life-example">A real life example</h2>
 
 Now let's discuss a real-life occurrence of ulnar and radial deviation. In Chopin &Eacute;tude Op. 25 Nr. 3, you'll notice through the score an emphasis on using the third finger repeatedly in both hands (fig. 16). I highly encourage you to try this example yourself (you don't need to play at speed if you are not ready for it yet).
 
@@ -193,7 +193,7 @@ Later on, the left hand needs to twist to reach the lower F2. Since the C3 playe
 
 Without any additional context, it is not clear whether Chopin devised this intentionally or is it a mere consequence of the fingering suggested in the score. Furthermore, it is not guaranteed that this fingering was written by Chopin himself, or added later by the sheet music editorial. Whatever the case, since this pattern is repeated all throughout the score, and the intent of the piece is technical in nature (even though the &Eacute;tudes are highly regarded as artistic pieces in their own right) it is safe to assume that one of the purposes of the piece is to consciously practice these movements.
 
-<h2>Closing thoughts</h2>
+<h2 id="closing-thoughts">Closing thoughts</h2>
 
 Having a proper understanding of the anatomical movements of the wrist, it is possible to describe with precision how and when these movements happen during a passage. We can then analyze how fingering affects movement, and whether a specific fingering mitigates or exacerbates a particular gesture. From then on, we can make adjustments aiming for fluidity of movement and reduction of effort.
 
