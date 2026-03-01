@@ -1,7 +1,3 @@
----
-title: Anatomy for Pianists
----
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,9 +5,12 @@ title: Anatomy for Pianists
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ title }}</title>
 
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=EB+Garamond:ital@0;1&family=Oswald&display=swap");
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="/global.css" />
     <link
@@ -19,7 +18,48 @@ title: Anatomy for Pianists
       href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
     />
   </head>
-  <body class="grid">
+  <body>
+    <div class="bg-grid" aria-hidden="true"></div>
+
+    <nav>
+      <div class="nav__inner">
+        <a href="/" class="nav__brand">amy<span>.</span>dev</a>
+        <ul class="nav__links">
+          <li><a href="/#skills">Skills</a></li>
+          <li><a href="/#experience">Experience</a></li>
+          <li><a href="/#projects">Projects</a></li>
+          <li><a href="/#talks">Talks</a></li>
+          <li><a href="/#writing">Writing</a></li>
+        </ul>
+      </div>
+    </nav>
+
     {{ content }}
+
+    <footer>
+      <div class="container">
+        <div class="footer__contact">
+          <a href="mailto:amyvpellegrini@gmail.com">
+            amyvpellegrini@gmail.com
+          </a>
+          <a href="https://github.com/amypellegrini" target="_blank">
+            github.com/amypellegrini
+          </a>
+          <a
+            href="https://bsky.app/profile/amypellegrini.bsky.social"
+            target="_blank"
+          >
+            @amypellegrini.bsky.social
+          </a>
+          <span style="color: var(--text-muted); font-size: 0.85rem">
+            Barcelona, Spain
+          </span>
+        </div>
+        <p class="footer__copy">
+          &copy; 2025 Amy Pellegrini. Spanish (native) &middot; English
+          (bilingual professional proficiency).
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
