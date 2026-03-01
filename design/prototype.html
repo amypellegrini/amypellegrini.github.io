@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Amy Pellegrini — AI Product Engineer &middot; Tech Lead</title>
+    <meta
+      name="description"
+      content="Amy Pellegrini — AI Product Engineer and Tech Lead based in Barcelona. Building human-in-the-loop agentic AI workflows."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ── Reset & Base ─────────────────────────────────────── */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --bg-primary: #0a0a0f;
+        --bg-secondary: #12121a;
+        --bg-card: #16161f;
+        --bg-card-hover: #1c1c28;
+        --border: #1e1e2e;
+        --border-accent: #2a2a3e;
+        --text-primary: #e4e4ef;
+        --text-secondary: #9393a8;
+        --text-muted: #5e5e74;
+        --accent: #6c63ff;
+        --accent-dim: #4a43cc;
+        --accent-glow: rgba(108, 99, 255, 0.15);
+        --accent-secondary: #00d4aa;
+        --accent-secondary-dim: rgba(0, 212, 170, 0.12);
+        --red: #ff4d6a;
+        --font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+        --font-mono: "JetBrains Mono", "Fira Code", monospace;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        font-size: 16px;
+      }
+
+      body {
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+        font-family: var(--font-sans);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      a:hover {
+        color: #8b84ff;
+      }
+
+      ::selection {
+        background: var(--accent);
+        color: #fff;
+      }
+
+      /* ── Utilities ────────────────────────────────────────── */
+      .container {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      .tag {
+        display: inline-block;
+        padding: 0.2rem 0.65rem;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-weight: 500;
+        font-family: var(--font-mono);
+        letter-spacing: 0.02em;
+        background: var(--accent-glow);
+        color: var(--accent);
+        border: 1px solid rgba(108, 99, 255, 0.2);
+      }
+
+      .tag--green {
+        background: var(--accent-secondary-dim);
+        color: var(--accent-secondary);
+        border-color: rgba(0, 212, 170, 0.2);
+      }
+
+      .section-label {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 0.75rem;
+      }
+
+      .section-title {
+        font-size: 1.75rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin-bottom: 2rem;
+        color: var(--text-primary);
+      }
+
+      /* ── Animated background grid ─────────────────────────── */
+      .bg-grid {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background-image:
+          linear-gradient(var(--border) 1px, transparent 1px),
+          linear-gradient(90deg, var(--border) 1px, transparent 1px);
+        background-size: 60px 60px;
+        opacity: 0.3;
+        mask-image: radial-gradient(
+          ellipse 70% 50% at 50% 0%,
+          black 30%,
+          transparent 100%
+        );
+      }
+
+      /* ── Hero ─────────────────────────────────────────────── */
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero__content {
+        position: relative;
+        z-index: 1;
+        max-width: 720px;
+      }
+
+      .hero__greeting {
+        font-family: var(--font-mono);
+        font-size: 0.9rem;
+        color: var(--accent-secondary);
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .hero__greeting::before {
+        content: ">";
+        color: var(--accent);
+      }
+
+      .hero__name {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        line-height: 1.1;
+        margin-bottom: 0.75rem;
+      }
+
+      .hero__name span {
+        background: linear-gradient(135deg, var(--accent) 0%, var(--accent-secondary) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hero__title {
+        font-size: 1.25rem;
+        font-weight: 400;
+        color: var(--text-secondary);
+        margin-bottom: 1.5rem;
+        line-height: 1.5;
+      }
+
+      .hero__summary {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        line-height: 1.7;
+        max-width: 600px;
+        margin-bottom: 2rem;
+      }
+
+      .hero__links {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .hero__link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.6rem 1.2rem;
+        border: 1px solid var(--border-accent);
+        border-radius: 6px;
+        color: var(--text-secondary);
+        font-size: 0.85rem;
+        font-weight: 500;
+        transition: all 0.2s;
+      }
+
+      .hero__link:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+        background: var(--accent-glow);
+      }
+
+      .hero__link svg {
+        width: 16px;
+        height: 16px;
+        fill: currentColor;
+      }
+
+      /* ── Glow orb behind hero ─────────────────────────────── */
+      .hero__glow {
+        position: absolute;
+        top: 20%;
+        right: -5%;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+        filter: blur(80px);
+        pointer-events: none;
+      }
+
+      /* ── Section spacing ──────────────────────────────────── */
+      section {
+        padding: 5rem 0;
+      }
+
+      section + section {
+        border-top: 1px solid var(--border);
+      }
+
+      /* ── Skills / Tech ────────────────────────────────────── */
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.25rem;
+      }
+
+      .skill-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 1.5rem;
+        transition: all 0.25s;
+      }
+
+      .skill-card:hover {
+        border-color: var(--border-accent);
+        background: var(--bg-card-hover);
+      }
+
+      .skill-card__title {
+        font-size: 0.95rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .skill-card__title::before {
+        content: attr(data-icon);
+        font-size: 1.1rem;
+      }
+
+      .skill-card__body {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        line-height: 1.6;
+      }
+
+      /* ── Experience timeline ──────────────────────────────── */
+      .timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .timeline-item {
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        gap: 2rem;
+        position: relative;
+      }
+
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: 180px;
+        top: 0;
+        bottom: -2rem;
+        width: 1px;
+        background: var(--border);
+      }
+
+      .timeline-item:last-child::before {
+        display: none;
+      }
+
+      .timeline__date {
+        font-family: var(--font-mono);
+        font-size: 0.78rem;
+        color: var(--text-muted);
+        padding-top: 0.25rem;
+        text-align: right;
+      }
+
+      .timeline__content {
+        padding-left: 2rem;
+        position: relative;
+      }
+
+      .timeline__content::before {
+        content: "";
+        position: absolute;
+        left: -4px;
+        top: 0.55rem;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--accent);
+        box-shadow: 0 0 8px var(--accent-glow);
+      }
+
+      .timeline__role {
+        font-weight: 600;
+        font-size: 1rem;
+        margin-bottom: 0.15rem;
+      }
+
+      .timeline__org {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        margin-bottom: 0.65rem;
+      }
+
+      .timeline__details {
+        list-style: none;
+        padding: 0;
+      }
+
+      .timeline__details li {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        line-height: 1.6;
+        padding-left: 1rem;
+        position: relative;
+        margin-bottom: 0.35rem;
+      }
+
+      .timeline__details li::before {
+        content: "—";
+        position: absolute;
+        left: 0;
+        color: var(--text-muted);
+      }
+
+      /* ── Projects ─────────────────────────────────────────── */
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .project-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 1.75rem;
+        transition: all 0.25s;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .project-card:hover {
+        border-color: var(--accent-dim);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 32px rgba(108, 99, 255, 0.08);
+      }
+
+      .project-card__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 0.75rem;
+      }
+
+      .project-card__name {
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+
+      .project-card__arrow {
+        color: var(--text-muted);
+        transition: color 0.2s, transform 0.2s;
+      }
+
+      .project-card:hover .project-card__arrow {
+        color: var(--accent);
+        transform: translate(2px, -2px);
+      }
+
+      .project-card__desc {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        line-height: 1.65;
+        margin-bottom: 1rem;
+        flex: 1;
+      }
+
+      .project-card__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+      }
+
+      /* ── Talks ─────────────────────────────────────────────── */
+      .talks-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+
+      .talk-item {
+        display: flex;
+        gap: 1.5rem;
+        align-items: flex-start;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 1.5rem;
+        transition: border-color 0.2s;
+      }
+
+      .talk-item:hover {
+        border-color: var(--border-accent);
+      }
+
+      .talk-item__icon {
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        background: var(--accent-glow);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--accent);
+        font-size: 1.1rem;
+      }
+
+      .talk-item__title {
+        font-weight: 600;
+        font-size: 0.95rem;
+        margin-bottom: 0.25rem;
+      }
+
+      .talk-item__meta {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+      }
+
+      /* ── Articles ──────────────────────────────────────────── */
+      .articles-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+
+      .article-item {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 1.5rem;
+        transition: all 0.2s;
+      }
+
+      .article-item:hover {
+        border-color: var(--border-accent);
+        background: var(--bg-card-hover);
+      }
+
+      .article-item__title {
+        font-weight: 600;
+        font-size: 0.95rem;
+        margin-bottom: 0.35rem;
+      }
+
+      .article-item__desc {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        line-height: 1.6;
+        margin-bottom: 0.5rem;
+      }
+
+      .article-item__date {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: var(--text-muted);
+      }
+
+      /* ── Footer ────────────────────────────────────────────── */
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 3rem 0;
+        text-align: center;
+      }
+
+      .footer__contact {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+      }
+
+      .footer__contact a {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+
+      .footer__contact a:hover {
+        color: var(--accent);
+      }
+
+      .footer__copy {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+      }
+
+      /* ── Nav ───────────────────────────────────────────────── */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        background: rgba(10, 10, 15, 0.8);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav__inner {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0.75rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .nav__brand {
+        font-weight: 700;
+        font-size: 0.9rem;
+        color: var(--text-primary);
+        letter-spacing: -0.01em;
+      }
+
+      .nav__brand span {
+        color: var(--accent);
+      }
+
+      .nav__links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+      }
+
+      .nav__links a {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+
+      .nav__links a:hover {
+        color: var(--text-primary);
+      }
+
+      /* ── Responsive ────────────────────────────────────────── */
+      @media (max-width: 768px) {
+        .hero {
+          min-height: auto;
+          padding-top: 6rem;
+          padding-bottom: 3rem;
+        }
+
+        .hero__glow {
+          width: 300px;
+          height: 300px;
+          top: 10%;
+          right: -20%;
+        }
+
+        .timeline-item {
+          grid-template-columns: 1fr;
+          gap: 0.25rem;
+        }
+
+        .timeline-item::before {
+          display: none;
+        }
+
+        .timeline__date {
+          text-align: left;
+          font-size: 0.75rem;
+        }
+
+        .timeline__content {
+          padding-left: 1rem;
+        }
+
+        .timeline__content::before {
+          left: -4px;
+        }
+
+        .nav__links {
+          display: none;
+        }
+
+        .projects-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .footer__contact {
+          flex-direction: column;
+          align-items: center;
+          gap: 0.75rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="bg-grid" aria-hidden="true"></div>
+
+    <!-- ── Nav ──────────────────────────────────────────────── -->
+    <nav>
+      <div class="nav__inner">
+        <div class="nav__brand">amy<span>.</span>dev</div>
+        <ul class="nav__links">
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#talks">Talks</a></li>
+          <li><a href="#writing">Writing</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ── Hero ─────────────────────────────────────────────── -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__content">
+          <p class="hero__greeting">AI Product Engineer &middot; Tech Lead</p>
+          <h1 class="hero__name"><span>Amy Pellegrini</span></h1>
+          <p class="hero__title">
+            Building human-in-the-loop agentic AI workflows.<br />
+            Based in Barcelona.
+          </p>
+          <p class="hero__summary">
+            Product-minded engineer with experience designing and building
+            AI-augmented workflows for real teams and products. I map business
+            processes end to end, identify where AI creates value versus where
+            humans need to stay in control, and build the systems that make it
+            work.
+          </p>
+          <div class="hero__links">
+            <a
+              href="https://github.com/amypellegrini"
+              target="_blank"
+              class="hero__link"
+            >
+              <svg viewBox="0 0 16 16">
+                <path
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                />
+              </svg>
+              GitHub
+            </a>
+            <a
+              href="https://bsky.app/profile/amypellegrini.bsky.social"
+              target="_blank"
+              class="hero__link"
+            >
+              <svg viewBox="0 0 512 512">
+                <path
+                  d="M111.8 62.2C170.2 105.9 233 194.7 256 242.4c23-47.6 85.8-136.4 144.2-180.2c42.1-31.6 110.3-56 110.3 21.8c0 15.5-8.9 130.5-14.1 149.2C478.2 298 412 314.6 353.1 304.5c102.9 17.5 129.1 75.5 72.5 133.5c-107.4 110.2-154.3-27.6-166.3-62.9l0 0c-1.7-4.9-2.6-7.8-3.3-7.8s-1.6 3-3.3 7.8l0 0c-12 35.3-59 173.1-166.3 62.9c-56.5-58-30.4-116 72.5-133.5C100 314.6 33.8 298 15.7 233.1C10.4 214.4 1.5 99.4 1.5 83.9c0-77.8 68.2-53.4 110.3-21.8z"
+                />
+              </svg>
+              Bluesky
+            </a>
+            <a href="https://jazzjam.app/" target="_blank" class="hero__link">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 3v10.55c-.59-.34-1.27-.55-2-.55C7.79 13 6 14.79 6 17s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"
+                />
+              </svg>
+              Jazz Jam Studio
+            </a>
+          </div>
+        </div>
+        <div class="hero__glow" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ── Skills ───────────────────────────────────────────── -->
+    <section id="skills">
+      <div class="container">
+        <p class="section-label">// capabilities</p>
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-card__title" data-icon="&#x1F916;">
+              AI &amp; Agentic Systems
+            </div>
+            <p class="skill-card__body">
+              Human-in-the-loop workflow design, skill-based agents, MCP
+              integrations, LLM-augmented development (Claude Code, Cursor),
+              evaluation and oversight patterns.
+            </p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card__title" data-icon="&#x26A1;">Core Stack</div>
+            <p class="skill-card__body">
+              React, TypeScript, Node.js, JavaScript, Python. Deep expertise
+              across the full JavaScript ecosystem.
+            </p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card__title" data-icon="&#x1F4F1;">Mobile</div>
+            <p class="skill-card__body">
+              React Native, native modules (C++, Android, iOS). Shipped
+              production apps on Google Play.
+            </p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card__title" data-icon="&#x1F5A5;">Backend</div>
+            <p class="skill-card__body">
+              REST APIs, GraphQL, Java/Kotlin, SQLite, PostgreSQL.
+              Microservices and API-first architectures.
+            </p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card__title" data-icon="&#x2601;">
+              Cloud &amp; Infra
+            </div>
+            <p class="skill-card__body">
+              AWS, Azure, microservices, CI/CD pipelines. Production release
+              management and incident response.
+            </p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card__title" data-icon="&#x1F527;">Practices</div>
+            <p class="skill-card__body">
+              TDD, spec-driven development, conventional commits, Agile/XP,
+              design systems.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Experience ───────────────────────────────────────── -->
+    <section id="experience">
+      <div class="container">
+        <p class="section-label">// career</p>
+        <h2 class="section-title">Professional Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline__date">Current</div>
+            <div class="timeline__content">
+              <div class="timeline__role">Team Lead — AI Startup Client</div>
+              <div class="timeline__org">Thoughtworks, Barcelona</div>
+              <ul class="timeline__details">
+                <li>
+                  Working embedded in an AI startup team that has fully embraced
+                  agentic AI-driven development
+                </li>
+                <li>
+                  Refining and improving the end-to-end agentic workflow across
+                  the software delivery lifecycle
+                </li>
+                <li>
+                  Collaborating with a team operating at the frontier of
+                  AI-augmented product engineering
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline__date">Previous</div>
+            <div class="timeline__content">
+              <div class="timeline__role">
+                Team Lead — Enterprise Client
+              </div>
+              <div class="timeline__org">Thoughtworks, Barcelona</div>
+              <ul class="timeline__details">
+                <li>
+                  Designed and implemented a human-in-the-loop agentic AI
+                  workflow for a full software development cycle
+                </li>
+                <li>
+                  Onboarded an entire development team to the workflow, coaching
+                  engineers on integrating AI agents into their daily practice
+                </li>
+                <li>
+                  System uses skill-based agents with MCP and CLI integrations,
+                  enforcing TDD, conventional commits, and CI/CD by design
+                </li>
+                <li>
+                  Led delivery of an ETL pipeline for processing images and
+                  product data
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline__date">Jul 2023 – Jun 2025</div>
+            <div class="timeline__content">
+              <div class="timeline__role">Senior Software Engineer</div>
+              <div class="timeline__org">UST, Barcelona</div>
+              <ul class="timeline__details">
+                <li>
+                  Supported a large-scale content distribution system for a UK
+                  financial services client
+                </li>
+                <li>
+                  Tech: Contentstack headless CMS, React, TypeScript, Next.js
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline__date">Aug 2019 – Jul 2023</div>
+            <div class="timeline__content">
+              <div class="timeline__role">Lead Software Developer</div>
+              <div class="timeline__org">
+                Thoughtworks, London &rarr; Barcelona
+              </div>
+              <ul class="timeline__details">
+                <li>
+                  Led implementation of a mobile micro-frontend framework (React
+                  Native / Android / iOS)
+                </li>
+                <li>
+                  Built ML platform for a multinational marketplace using React,
+                  Node.js, Nx, and Go
+                </li>
+                <li>
+                  Delivered a pricing solution for a fleet of 600k cars for a
+                  major UK automotive retailer
+                </li>
+                <li>
+                  Managed production releases, monitoring, and incident response
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline__date">Apr 2018 – May 2019</div>
+            <div class="timeline__content">
+              <div class="timeline__role">Software Developer</div>
+              <div class="timeline__org">Digital Detox, London</div>
+              <ul class="timeline__details">
+                <li>
+                  React development for agency clients including international
+                  telecom and editorial brands
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline__date">2010 – 2017</div>
+            <div class="timeline__content">
+              <div class="timeline__role">Earlier Roles</div>
+              <div class="timeline__org">
+                RBI, Wowcher, Globant, Etermax, Clar&iacute;n — London &amp;
+                Buenos Aires
+              </div>
+              <ul class="timeline__details">
+                <li>
+                  Progressive front-end roles across media, e-commerce, and
+                  gaming, building deep expertise in the JavaScript ecosystem
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Projects ──────────────────────────────────────────── -->
+    <section id="projects">
+      <div class="container">
+        <p class="section-label">// building</p>
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+          <a
+            href="https://jazzjam.app/"
+            target="_blank"
+            class="project-card"
+          >
+            <div class="project-card__header">
+              <div class="project-card__name">Jazz Jam Studio</div>
+              <span class="project-card__arrow">&nearr;</span>
+            </div>
+            <p class="project-card__desc">
+              A music practice app designed, built, and shipped end to end — and
+              a playground for applying agentic AI workflows to solo product
+              development. Full product ownership from architecture through app
+              store deployment. Live on Google Play.
+            </p>
+            <div class="project-card__tags">
+              <span class="tag">React Native</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">SQLite</span>
+              <span class="tag">C++</span>
+              <span class="tag">Python</span>
+              <span class="tag tag--green">Agentic AI</span>
+            </div>
+          </a>
+
+          <a
+            href="https://amypellegrini.github.io/simply-labyrinths-web"
+            target="_blank"
+            class="project-card"
+          >
+            <div class="project-card__header">
+              <div class="project-card__name">Simply Labyrinths</div>
+              <span class="project-card__arrow">&nearr;</span>
+            </div>
+            <p class="project-card__desc">
+              Maze game prototype built in Svelte. An exploration of procedural
+              generation and game mechanics on the web.
+            </p>
+            <div class="project-card__tags">
+              <span class="tag">Svelte</span>
+              <span class="tag">Game Dev</span>
+            </div>
+          </a>
+
+          <a
+            href="https://amypellegrini.github.io/piano-chord-charts/triads/index.html#major"
+            target="_blank"
+            class="project-card"
+          >
+            <div class="project-card__header">
+              <div class="project-card__name">Piano Chord Charts</div>
+              <span class="project-card__arrow">&nearr;</span>
+            </div>
+            <p class="project-card__desc">
+              Piano charts generator CLI tool and example library. Programmatic
+              generation of chord visualisations for music education.
+            </p>
+            <div class="project-card__tags">
+              <span class="tag">CLI</span>
+              <span class="tag">Music</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Talks ─────────────────────────────────────────────── -->
+    <section id="talks">
+      <div class="container">
+        <p class="section-label">// speaking</p>
+        <h2 class="section-title">Talks &amp; Presentations</h2>
+        <div class="talks-list">
+          <a
+            href="https://www.youtube.com/watch?v=nEl235iYbIU"
+            target="_blank"
+            class="talk-item"
+          >
+            <div class="talk-item__icon">&#x25B6;</div>
+            <div>
+              <div class="talk-item__title">Model Context Protocol (MCP)</div>
+              <div class="talk-item__meta">
+                Thoughtworks &middot; publicly shared &middot; Watch on YouTube
+              </div>
+            </div>
+          </a>
+          <div class="talk-item">
+            <div class="talk-item__icon">&#x1F399;</div>
+            <div>
+              <div class="talk-item__title">Sensible AI Workflows</div>
+              <div class="talk-item__meta">
+                Thoughtworks &middot; internal presentation &middot; Covering
+                human-in-the-loop agentic workflows for software delivery teams
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Writing ───────────────────────────────────────────── -->
+    <section id="writing">
+      <div class="container">
+        <p class="section-label">// writing</p>
+        <h2 class="section-title">Articles</h2>
+        <div class="articles-list">
+          <a href="/movements-of-the-wrist" class="article-item">
+            <div class="article-item__title">
+              Movements of the Wrist — Anatomy for Pianists
+            </div>
+            <p class="article-item__desc">
+              A lesson covering flexion, extension, ulnar and radial deviation
+              of the wrist. Understanding these concepts helps reduce excess
+              effort and injury risk.
+            </p>
+            <span class="article-item__date">Jan 2024</span>
+          </a>
+          <a href="/successful-design-systems" class="article-item">
+            <div class="article-item__title">Successful Design Systems</div>
+            <p class="article-item__desc">
+              Practical notes on building reusable component libraries —
+              emergent design, flat structures, utility classes, and color
+              tokens.
+            </p>
+            <span class="article-item__date">Technical article</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Footer ────────────────────────────────────────────── -->
+    <footer>
+      <div class="container">
+        <div class="footer__contact">
+          <a href="mailto:amyvpellegrini@gmail.com">
+            amyvpellegrini@gmail.com
+          </a>
+          <a href="https://github.com/amypellegrini" target="_blank">
+            github.com/amypellegrini
+          </a>
+          <a
+            href="https://bsky.app/profile/amypellegrini.bsky.social"
+            target="_blank"
+          >
+            @amypellegrini.bsky.social
+          </a>
+          <span style="color: var(--text-muted); font-size: 0.85rem">
+            Barcelona, Spain
+          </span>
+        </div>
+        <p class="footer__copy">
+          &copy; 2025 Amy Pellegrini. Spanish (native) &middot; English
+          (bilingual professional proficiency).
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
