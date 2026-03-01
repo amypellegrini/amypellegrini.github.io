@@ -362,26 +362,13 @@ permalink: /
     <p class="section-label">// writing</p>
     <h2 class="section-title">Articles</h2>
     <div class="articles-list">
-      <a href="/movements-of-the-wrist" class="article-item">
-        <div class="article-item__title">
-          Movements of the Wrist &mdash; Anatomy for Pianists
-        </div>
-        <p class="article-item__desc">
-          A lesson covering flexion, extension, ulnar and radial deviation
-          of the wrist. Understanding these concepts helps reduce excess
-          effort and injury risk.
-        </p>
-        <span class="article-item__date">Jan 2024</span>
+      {% for article in collections.publishedArticles %}
+      <a href="{{ article.url }}" class="article-item">
+        <div class="article-item__title">{{ article.data.title | replace: " &middot; Amy Pellegrini", "" }}</div>
+        <p class="article-item__desc">{{ article.data.description }}</p>
+        <span class="article-item__date">{{ article.data.articleDate }}</span>
       </a>
-      <a href="/successful-design-systems" class="article-item">
-        <div class="article-item__title">Successful Design Systems</div>
-        <p class="article-item__desc">
-          Practical notes on building reusable component libraries &mdash;
-          emergent design, flat structures, utility classes, and color
-          tokens.
-        </p>
-        <span class="article-item__date">Technical article</span>
-      </a>
+      {% endfor %}
     </div>
   </div>
 </section>

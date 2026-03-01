@@ -1,6 +1,10 @@
 ---
 layout: default
 title: Movements of the Wrist &mdash; Anatomy for Pianists &middot; Amy Pellegrini
+tags: articles
+description: "A lesson covering flexion, extension, ulnar and radial deviation of the wrist. Understanding these concepts helps reduce excess effort and injury risk."
+articleDate: "Jan 2024"
+draft: false
 ---
 
 <header class="article-header">

@@ -1,6 +1,11 @@
 ---
 layout: default
 title: Successful Design Systems &middot; Amy Pellegrini
+tags: articles
+description: "Practical notes on building reusable component libraries — emergent design, flat structures, utility classes, and color tokens."
+articleDate: "Technical article"
+draft: true
+permalink: false
 ---
 
 <header class="article-header">
