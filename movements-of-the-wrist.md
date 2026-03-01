@@ -207,7 +207,7 @@ It is worth noting that it isn't always the case that specific types of movement
 <section class="article-footer">
   <div class="container">
     <div class="author-card">
-      <div class="author-card__avatar">AP</div>
+      <img class="author-card__avatar" src="/images/profile.png" alt="Amy Pellegrini" />
       <div>
         <div class="author-card__name">Amy Pellegrini</div>
         <div class="author-card__bio">

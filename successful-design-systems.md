@@ -178,7 +178,7 @@ Semanic Versioning can go a long way in helping teams consuming the same package
 <section class="article-footer">
   <div class="container">
     <div class="author-card">
-      <div class="author-card__avatar">AP</div>
+      <img class="author-card__avatar" src="/images/profile.png" alt="Amy Pellegrini" />
       <div>
         <div class="author-card__name">Amy Pellegrini</div>
         <div class="author-card__bio">
