@@ -47,7 +47,7 @@ When describing the gestures, I will do so from the perspective of a pianist sit
   <div class="figure__caption">Fig. 1: Perspective of the pianist</div>
 </div>
 
-Please note that the anatomy of each person is different, and not two hands are the same. The advice of which movement to use for a given scenario may differ from person to person, even when referring to the same passage and fingering.
+Please note that the anatomy of each person is different, and no two hands are the same. The advice of which movement to use for a given scenario may differ from person to person, even when referring to the same passage and fingering.
 
 <h2 id="flexion-and-extension">Flexion and extension</h2>
 
@@ -163,7 +163,7 @@ With the right hand, the opposite is true: radial deviation is more prominent wh
     <div class="figure__caption">Fig. 15: Fingering adjustment to reduce radial deviation.</div>
   </div>
   <p>
-    Both gestures require an effort which is more strenuous than keeping the hand aligned with the wrist. Recognizing when this happens is crucial to adjust technique and reduce any unnecessary stress imposed to our anatomy.
+    Both gestures require an effort which is more strenuous than keeping the hand aligned with the wrist. Recognizing when this happens is crucial to adjust technique and reduce any unnecessary stress imposed on our anatomy.
   </p>
   <p>
     For example, when the hand reaches the far end of the piano, we can adjust our fingering in favor of the thumb, index, and middle finger, reducing radial deviation when compared to using the fourth and fifth fingers. This means our fingers would be at an angle in relation to the keys, but closer to a neutral position in relation to the wrist (fig. 15).
@@ -195,15 +195,13 @@ Later on, the left hand needs to twist to reach the lower F2. Since the C3 playe
   <div class="sheet-music__caption">Fig. 18: Radial deviation in Chopin &Eacute;tude Op. 25 Nr. 3 (m. 1&ndash;2).</div>
 </div>
 
-Without any additional context, it is not clear whether Chopin devised this intentionally or is it a mere consequence of the fingering suggested in the score. Furthermore, it is not guaranteed that this fingering was written by Chopin himself, or added later by the sheet music editorial. Whatever the case, since this pattern is repeated all throughout the score, and the intent of the piece is technical in nature (even though the &Eacute;tudes are highly regarded as artistic pieces in their own right) it is safe to assume that one of the purposes of the piece is to consciously practice these movements.
+Without any additional context, it is not clear whether Chopin devised this intentionally or is just a consequence of the fingering suggested in the score. Furthermore, it is not certain that this fingering was written by Chopin himself, or added later by the sheet music editorial. Whatever the case, since this pattern is repeated all throughout the score and the intent of the piece is technical in nature (even though the &Eacute;tudes are highly regarded as artistic pieces in their own right) it is safe to assume that one of the purposes of the piece is to consciously practice these movements.
 
 <h2 id="closing-thoughts">Closing thoughts</h2>
 
 Having a proper understanding of the anatomical movements of the wrist, it is possible to describe with precision how and when these movements happen during a passage. We can then analyze how fingering affects movement, and whether a specific fingering mitigates or exacerbates a particular gesture. From then on, we can make adjustments aiming for fluidity of movement and reduction of effort.
 
-As you practice, if you pay attention to these aspects of technique, you'll start realizing what changes can be made to reduce tension. Don't be shy about discussing your observations with your piano instructor, and seek advice from a physiotherapist if you find there are movements which cause too much tension or discomfort. I highly recommend analyzing video recordings of piano performances where you can see the hands. By analyzing the movements of other pianists and comparing them to your own, you may gain precious insights.
-
-It is worth noting that it isn't always the case that specific types of movements should always be avoided. As we've seen in the example of thumb crossing, some radial deviation would be preferred to extreme thumb flexion. Some people may feel more comfortable performing certain types of movements than others. An exaggerated gesture can be justified, provided it is not repeated consecutively and contributes to the overall fluidity of movement. We always need to assess trade-offs, mitigation strategies, and conveniences when adjusting technique. You'll have to apply your own judgment to decide whether some change is necessary in your own playing. Equipped with this knowledge, I hope you will be able to do so.
+Please note that by all this I'm not suggesting that specific types of movements should _always_ be avoided. As we've seen in the example of thumb crossing, some radial deviation would be preferred to extreme thumb flexion. Some people may feel more comfortable performing certain types of movements than others. An exaggerated gesture can be justified, provided it is not repeated consecutively and contributes to the overall fluidity of movement. We always need to assess trade-offs, mitigation strategies, and conveniences when adjusting technique. You'll have to apply your own judgment to decide whether some change is necessary in your own playing.
 
   </div>
 </article>
@@ -220,18 +218,5 @@ It is worth noting that it isn't always the case that specific types of movement
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="related">
-  <div class="container">
-    <p class="related__title">// more writing</p>
-    <a href="/successful-design-systems" class="related__item">
-      <div class="related__item-title">Successful Design Systems</div>
-      <div class="related__item-desc">
-        Practical notes on building reusable component libraries &mdash;
-        emergent design, flat structures, utility classes, and color tokens.
-      </div>
-    </a>
   </div>
 </section>
