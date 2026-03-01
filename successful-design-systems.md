@@ -36,16 +36,16 @@ permalink: false
 In this article I'll share some of the learnings and techniques I've learned to build successful design systems that can scale. By "design system" I just mean a library of reusable components, and a collection of utilities to make them work as part of an overarching layout.
 
 <div class="note">
-From this point on I'll refrain from using the terms "design system" in favour of "reusable component library". Mainly because that's what they are, but also because the terms "design system", in my opinion, could refer to more abstract ways of thinking, or breader philosohical aspects of design in general.
+From this point on I'll refrain from using the terms "design system" in favour of "reusable component library". Mainly because that's what they are, but also because the terms "design system", in my opinion, could refer to more abstract ways of thinking, or broader philosophical aspects of design in general.
 </div>
 
-Every large organization building user interfaces for their digital products have faced the challenge of implementing reusable component libraries, and in doing so, many times they have shoot themselves in the foot. The problem I'm refering to is the need of providing a consistent user experience across a whole family of applications, while reducing development costs by promoting reusability.
+Every large organization building user interfaces for their digital products have faced the challenge of implementing reusable component libraries, and in doing so, many times they have shot themselves in the foot. The problem I'm referring to is the need of providing a consistent user experience across a whole family of applications, while reducing development costs by promoting reusability.
 
 <h3 id="leverage-emergent-design">Leverage emergent design</h3>
 
 Emergent design is a technique by which a successful design pattern is identified from multiple occurrences, as it "emerges" over time. With this approach, instead of waterfalling technical decisions about how a component layout, we observe a few occurrences where it has already been implemented to identify common use cases, and possibly some early reusability challenges. This approach requires us to think not just about the individual component in isolation, but also the different layouts where it will be embedded, involving active research of what is being used currently on the wild.
 
-A common objection to this approach is that it defeats the purpose, since going back and replacing components already in use goes against the very principle of reusability. However, in my experience, system don't arise out of nowehere, and most likely there are existing use cases that could be used as a source for input. Rather than waiting for a component to show up a number of times, we can create basic prototypes or look for examples where such component is already in use. Each scenario becomes a stress test, highlighting basic requirements and constraints the component will have to satisfy to scale up successfully.
+A common objection to this approach is that it defeats the purpose, since going back and replacing components already in use goes against the very principle of reusability. However, in my experience, system don't arise out of nowhere, and most likely there are existing use cases that could be used as a source for input. Rather than waiting for a component to show up a number of times, we can create basic prototypes or look for examples where such component is already in use. Each scenario becomes a stress test, highlighting basic requirements and constraints the component will have to satisfy to scale up successfully.
 
 <h3 id="flat-structure">Start with a flat structure and avoid arbitrary or premature categorizations</h3>
 
@@ -134,7 +134,7 @@ const BackButton = ({ backgroundColor, ...props }: BackButtonProps) => {
 
 <h3 id="avoid-interface-encapsulation">Avoid interface encapsulation</h3>
 
-We have already discussed interface encapsulation in the <a href="#extend-native-interfaces">extend native interfaces</a> section. By inerface encapsulation I refer to hiding a native component interface and preventing consumers from defning native prop values supported by the native element.
+We have already discussed interface encapsulation in the <a href="#extend-native-interfaces">extend native interfaces</a> section. By interface encapsulation I refer to hiding a native component interface and preventing consumers from defining native prop values supported by the native element.
 
 This can happen when we have components which are actually composed of multiple nested components, or require a wrapper element to handle some aspect of layout.
 
@@ -175,7 +175,7 @@ const BackButton = ({ onPress, disabled, styles }: BackButtonProps) => {
 
 <h3 id="semantic-versioning">Embrace automated semantic versioning or semantic release</h3>
 
-Semanic Versioning can go a long way in helping teams consuming the same package maintain their codebases stable and their dependencies predictable. If your team is reponsible for maintaining a reusable package that is consumed by other teams, familiarity with semantic versioning should be a basic requirement.
+Semantic Versioning can go a long way in helping teams consuming the same package maintain their codebases stable and their dependencies predictable. If your team is responsible for maintaining a reusable package that is consumed by other teams, familiarity with semantic versioning should be a basic requirement.
 
   </div>
 </article>

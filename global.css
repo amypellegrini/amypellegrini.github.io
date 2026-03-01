@@ -984,6 +984,11 @@ footer {
   color: var(--accent);
 }
 
+.footer__location {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
 .footer__copy {
   font-size: 0.75rem;
   color: var(--text-muted);
