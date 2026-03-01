@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Movements of the Wrist — Anatomy for Pianists &middot; Amy Pellegrini</title>
+    <meta
+      name="description"
+      content="A lesson covering flexion, extension, ulnar and radial deviation of the wrist. Understanding these concepts helps reduce excess effort and injury risk."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ── Reset & Base ─────────────────────────────────────── */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --bg-primary: #0a0a0f;
+        --bg-secondary: #12121a;
+        --bg-card: #16161f;
+        --bg-card-hover: #1c1c28;
+        --border: #1e1e2e;
+        --border-accent: #2a2a3e;
+        --text-primary: #e4e4ef;
+        --text-secondary: #9393a8;
+        --text-muted: #5e5e74;
+        --accent: #6c63ff;
+        --accent-dim: #4a43cc;
+        --accent-glow: rgba(108, 99, 255, 0.15);
+        --accent-secondary: #00d4aa;
+        --accent-secondary-dim: rgba(0, 212, 170, 0.12);
+        --red: #ff4d6a;
+        --font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+        --font-mono: "JetBrains Mono", "Fira Code", monospace;
+        --font-serif: "EB Garamond", "Georgia", "Times New Roman", serif;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        font-size: 16px;
+      }
+
+      body {
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+        font-family: var(--font-sans);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      a:hover {
+        color: #8b84ff;
+      }
+
+      ::selection {
+        background: var(--accent);
+        color: #fff;
+      }
+
+      /* ── Utilities ────────────────────────────────────────── */
+      .container {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      .tag {
+        display: inline-block;
+        padding: 0.2rem 0.65rem;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-weight: 500;
+        font-family: var(--font-mono);
+        letter-spacing: 0.02em;
+        background: var(--accent-glow);
+        color: var(--accent);
+        border: 1px solid rgba(108, 99, 255, 0.2);
+      }
+
+      .tag--green {
+        background: var(--accent-secondary-dim);
+        color: var(--accent-secondary);
+        border-color: rgba(0, 212, 170, 0.2);
+      }
+
+      .section-label {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 0.75rem;
+      }
+
+      /* ── Animated background grid ─────────────────────────── */
+      .bg-grid {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background-image:
+          linear-gradient(var(--border) 1px, transparent 1px),
+          linear-gradient(90deg, var(--border) 1px, transparent 1px);
+        background-size: 60px 60px;
+        opacity: 0.3;
+        mask-image: radial-gradient(
+          ellipse 70% 50% at 50% 0%,
+          black 30%,
+          transparent 100%
+        );
+      }
+
+      /* ── Nav ───────────────────────────────────────────────── */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        background: rgba(10, 10, 15, 0.8);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav__inner {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0.75rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .nav__brand {
+        font-weight: 700;
+        font-size: 0.9rem;
+        color: var(--text-primary);
+        letter-spacing: -0.01em;
+      }
+
+      .nav__brand span {
+        color: var(--accent);
+      }
+
+      .nav__links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+      }
+
+      .nav__links a {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+
+      .nav__links a:hover {
+        color: var(--text-primary);
+      }
+
+      /* ── Article Header ──────────────────────────────────── */
+      .article-header {
+        padding-top: 7rem;
+        padding-bottom: 3rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .article-header__glow {
+        position: absolute;
+        top: -10%;
+        right: -10%;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+        filter: blur(80px);
+        pointer-events: none;
+      }
+
+      .article-header__back {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: var(--text-muted);
+        margin-bottom: 2rem;
+        transition: color 0.2s;
+      }
+
+      .article-header__back:hover {
+        color: var(--accent);
+      }
+
+      .article-header__back svg {
+        width: 14px;
+        height: 14px;
+        fill: currentColor;
+      }
+
+      .article-header__meta {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-bottom: 1.25rem;
+      }
+
+      .article-header__date {
+        font-family: var(--font-mono);
+        font-size: 0.78rem;
+        color: var(--text-muted);
+      }
+
+      .article-header__reading {
+        font-family: var(--font-mono);
+        font-size: 0.78rem;
+        color: var(--text-muted);
+      }
+
+      .article-header__title {
+        font-size: clamp(1.75rem, 4vw, 2.75rem);
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        line-height: 1.15;
+        margin-bottom: 1rem;
+      }
+
+      .article-header__title span {
+        background: linear-gradient(135deg, var(--accent) 0%, var(--accent-secondary) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .article-header__subtitle {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        line-height: 1.6;
+        max-width: 680px;
+      }
+
+      /* ── Article Body / Prose ──────────────────────────────── */
+      .article-body {
+        padding: 3rem 0 5rem;
+        border-top: 1px solid var(--border);
+      }
+
+      .article-body .container {
+        max-width: 780px;
+      }
+
+      .article-body h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+        color: var(--text-primary);
+        position: relative;
+        padding-left: 1rem;
+      }
+
+      .article-body h2::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.15em;
+        bottom: 0.15em;
+        width: 3px;
+        border-radius: 2px;
+        background: var(--accent);
+      }
+
+      .article-body h3 {
+        font-size: 1.15rem;
+        font-weight: 600;
+        margin-top: 2rem;
+        margin-bottom: 0.75rem;
+        color: var(--text-primary);
+      }
+
+      .article-body p {
+        font-family: var(--font-serif);
+        font-size: 1.4rem;
+        color: var(--text-secondary);
+        line-height: 1.8;
+        margin-bottom: 1.25rem;
+      }
+
+      .article-body > .container > p:first-child {
+        font-family: var(--font-serif);
+        font-size: 1.5rem;
+        color: var(--text-primary);
+        line-height: 1.8;
+      }
+
+      /* ── Figures & Images ──────────────────────────────────── */
+      .figure {
+        margin: 2rem 0;
+        border-radius: 8px;
+        overflow: hidden;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+      }
+
+      .figure img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .figure__caption {
+        padding: 0.75rem 1rem;
+        font-size: 0.8rem;
+        color: var(--text-secondary);
+        font-family: var(--font-mono);
+        border-top: 1px solid var(--border);
+      }
+
+      /* ── Side-by-side figures ─────────────────────────────── */
+      .figure-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.25rem;
+        margin: 2rem 0;
+      }
+
+      .figure-row .figure {
+        margin: 0;
+      }
+
+      /* ── Info box / callout ────────────────────────────────── */
+      .info-box {
+        background: var(--bg-card);
+        border: 1px solid var(--border-accent);
+        border-left: 3px solid var(--accent);
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin: 2rem 0;
+      }
+
+      .info-box h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--accent);
+        margin-top: 0;
+        margin-bottom: 0.75rem;
+      }
+
+      .info-box p {
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        line-height: 1.7;
+        margin-bottom: 0.75rem;
+      }
+
+      .info-box p:last-of-type {
+        margin-bottom: 0;
+      }
+
+      .info-box img {
+        display: block;
+        max-width: 280px;
+        width: 100%;
+        margin: 1rem auto;
+        border-radius: 6px;
+      }
+
+      .info-box .figure__caption {
+        padding: 0.5rem 0 0;
+        border-top: none;
+        text-align: center;
+      }
+
+      .info-box .attribution {
+        font-size: 0.7rem;
+        color: var(--text-muted);
+        margin-top: 0.5rem;
+      }
+
+      .info-box .attribution a {
+        color: var(--text-muted);
+        text-decoration: underline;
+      }
+
+      .info-box .attribution a:hover {
+        color: var(--accent);
+      }
+
+      /* ── Sheet music wrapper ───────────────────────────────── */
+      .sheet-music {
+        margin: 2rem 0;
+        border-radius: 8px;
+        overflow: hidden;
+        background: #f5f5f0;
+        border: 1px solid var(--border);
+      }
+
+      .sheet-music img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .sheet-music__caption {
+        padding: 0.75rem 1rem;
+        font-size: 0.8rem;
+        color: var(--text-secondary);
+        font-family: var(--font-mono);
+        background: var(--bg-card);
+        border-top: 1px solid var(--border);
+      }
+
+      /* ── Text wrapping around image ──────────────────────── */
+      .content-split {
+        margin: 2rem 0;
+        overflow: hidden;
+      }
+
+      .content-split .figure {
+        width: 45%;
+        margin: 0 0 1rem 1.5rem;
+        float: right;
+      }
+
+      .content-split--text-narrow .figure {
+        width: 45%;
+      }
+
+      .content-split--text-wide .figure {
+        width: 35%;
+      }
+
+      .content-split--image-left .figure {
+        float: left;
+        margin: 0 1.5rem 1rem 0;
+      }
+
+      .content-split p {
+        margin-bottom: 1rem;
+      }
+
+      .content-split p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── Article footer / author card ──────────────────────── */
+      .article-footer {
+        border-top: 1px solid var(--border);
+        padding: 3rem 0;
+      }
+
+      .article-footer .container {
+        max-width: 780px;
+      }
+
+      .author-card {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 1.5rem;
+      }
+
+      .author-card__avatar {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--accent) 0%, var(--accent-secondary) 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 1.1rem;
+        color: #fff;
+        flex-shrink: 0;
+      }
+
+      .author-card__name {
+        font-weight: 600;
+        font-size: 0.95rem;
+        margin-bottom: 0.2rem;
+      }
+
+      .author-card__bio {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        line-height: 1.5;
+      }
+
+      /* ── Related articles ──────────────────────────────────── */
+      .related {
+        border-top: 1px solid var(--border);
+        padding: 3rem 0;
+      }
+
+      .related .container {
+        max-width: 780px;
+      }
+
+      .related__title {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 1.25rem;
+      }
+
+      .related__item {
+        display: block;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 1.25rem;
+        transition: all 0.2s;
+      }
+
+      .related__item:hover {
+        border-color: var(--border-accent);
+        background: var(--bg-card-hover);
+      }
+
+      .related__item-title {
+        font-weight: 600;
+        font-size: 0.95rem;
+        margin-bottom: 0.35rem;
+        color: var(--text-primary);
+      }
+
+      .related__item-desc {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        line-height: 1.6;
+      }
+
+      /* ── Footer ────────────────────────────────────────────── */
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 3rem 0;
+        text-align: center;
+      }
+
+      .footer__contact {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+      }
+
+      .footer__contact a {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+
+      .footer__contact a:hover {
+        color: var(--accent);
+      }
+
+      .footer__copy {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+      }
+
+      /* ── Responsive ────────────────────────────────────────── */
+      @media (max-width: 768px) {
+        .article-header {
+          padding-top: 5.5rem;
+          padding-bottom: 2rem;
+        }
+
+        .article-header__glow {
+          width: 300px;
+          height: 300px;
+          top: -5%;
+          right: -20%;
+        }
+
+        .figure-row {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
+
+        .content-split .figure {
+          float: none;
+          width: 100%;
+          margin: 0 0 1rem 0;
+        }
+
+        .nav__links {
+          display: none;
+        }
+
+        .author-card {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .footer__contact {
+          flex-direction: column;
+          align-items: center;
+          gap: 0.75rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="bg-grid" aria-hidden="true"></div>
+
+    <!-- ── Nav ──────────────────────────────────────────────── -->
+    <nav>
+      <div class="nav__inner">
+        <a href="/design/prototype.html" class="nav__brand">amy<span>.</span>dev</a>
+        <ul class="nav__links">
+          <li><a href="/design/prototype.html#skills">Skills</a></li>
+          <li><a href="/design/prototype.html#experience">Experience</a></li>
+          <li><a href="/design/prototype.html#projects">Projects</a></li>
+          <li><a href="/design/prototype.html#talks">Talks</a></li>
+          <li><a href="/design/prototype.html#writing">Writing</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ── Article Header ──────────────────────────────────── -->
+    <header class="article-header">
+      <div class="container">
+        <div class="article-header__glow" aria-hidden="true"></div>
+        <a href="/design/prototype.html#writing" class="article-header__back">
+          <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+          Back to articles
+        </a>
+        <div class="article-header__meta">
+          <span class="article-header__date">Jan 2024</span>
+          <span class="tag">Anatomy</span>
+          <span class="tag tag--green">Piano</span>
+          <span class="article-header__reading">8 min read</span>
+        </div>
+        <h1 class="article-header__title">
+          <span>Movements of the Wrist</span><br />
+          Anatomy for Pianists
+        </h1>
+        <p class="article-header__subtitle">
+          A lesson covering flexion, extension, ulnar and radial deviation
+          of the wrist. Understanding these concepts helps reduce excess
+          effort and improve your ability to perform more demanding passages
+          while reducing the risk of injury.
+        </p>
+      </div>
+    </header>
+
+    <!-- ── Article Body ────────────────────────────────────── -->
+    <article class="article-body">
+      <div class="container">
+
+        <!-- ── Introduction ────────────────────────────────── -->
+        <h2>Introduction</h2>
+        <p>
+          In this lesson I'll discuss some hand gestures known as flexion, extension, ulnar and radial deviation of the wrist. Understanding these concepts will help you reduce excess effort, and improve your ability to perform more demanding passages while reducing the risk of injury. Having said this, if you want to dive deeper into the anatomical aspects of the wrist, I'd recommend asking a physiotherapist or relevant health professional.
+        </p>
+        <p>
+          When describing the gestures, I will do so from the perspective of a pianist sitting at the piano, so the higher register would be at the right, and the lower register at the left (fig. 1).
+        </p>
+
+        <div class="figure">
+          <img src="../images/Perspective of the pianist.png" alt="Perspective of the pianist" />
+          <div class="figure__caption">Fig. 1: Perspective of the pianist</div>
+        </div>
+
+        <p>
+          Please note that the anatomy of each person is different, and not two hands are the same. The advice of which movement to use for a given scenario may differ from person to person, even when referring to the same passage and fingering.
+        </p>
+
+        <!-- ── Flexion and extension ───────────────────────── -->
+        <h2>Flexion and extension</h2>
+        <p>
+          Flexion is the anatomical action of bending or decreasing the angle between two body parts. Extension is increasing the angle between two body parts. For example, when you close your hand to make a fist, you are "flexing" the fingers towards the palm (fig. 2). When you open your hand and straighten your fingers, you are "extending" your fingers away from your palm (fig. 3).
+        </p>
+
+        <div class="figure-row">
+          <div class="figure">
+            <img src="../images/Flexion of the fingers.png" alt="Flexion of the fingers" />
+            <div class="figure__caption">Fig. 2: Flexion of the fingers.</div>
+          </div>
+          <div class="figure">
+            <img src="../images/Extension of the fingers.png" alt="Extension of the fingers" />
+            <div class="figure__caption">Fig. 3: Extension of the fingers.</div>
+          </div>
+        </div>
+
+        <p>
+          Flexion and extension of the wrist refer to reducing or increasing the angle between the palm of the hand and the forearm. Whenever you bend the palm of your hand up or down (assuming your palm and forearm are parallel to the floor) we are talking about flexion and extension of the wrist (figs. 4 and 5).
+        </p>
+
+        <div class="figure-row">
+          <div class="figure">
+            <img src="../images/Flexion of the wrist.png" alt="Flexion of the wrist" />
+            <div class="figure__caption">Fig. 4: Flexion of the wrist.</div>
+          </div>
+          <div class="figure">
+            <img src="../images/Extension of the wrist.png" alt="Extension of the wrist" />
+            <div class="figure__caption">Fig. 5: Extension of the wrist.</div>
+          </div>
+        </div>
+
+        <!-- ── Ulnar and radial deviation ──────────────────── -->
+        <h2>Ulnar and radial deviation</h2>
+        <p>
+          Ulnar and radial deviation involves bending the wrist laterally, left or right (again assuming your palm and forearm are parallel to the floor). Ulnar deviation means bending the wrist to the side of the little finger, while radial deviation is bending the wrist to the side of the thumb (figs. 6 and 7).
+        </p>
+
+        <div class="figure-row">
+          <div class="figure">
+            <img src="../images/Ulnar deviation.png" alt="Ulnar deviation" />
+            <div class="figure__caption">Fig. 6: Ulnar deviation.</div>
+          </div>
+          <div class="figure">
+            <img src="../images/Radial deviation.png" alt="Radial deviation" />
+            <div class="figure__caption">Fig. 7: Radial deviation.</div>
+          </div>
+        </div>
+
+        <!-- ── Info box: Ulna & radius bones ───────────────── -->
+        <div class="info-box">
+          <h3>Ulna and radius bones</h3>
+          <p>
+            The terms "ulnar" and "radial" are associated with the bones in the forearm, the ulna and the radius, to where each movement is directed (fig. 8).
+          </p>
+          <img src="../images/Radius_and_Ulna_-_Forearm_Bones.jpg" alt="Ulna and radius bones" />
+          <div class="figure__caption">Fig. 8: Ulna and radius bones.</div>
+          <p class="attribution">
+            By DrJanaOfficial — Own work, CC BY-SA 4.0,
+            <a target="_blank" href="https://commons.wikimedia.org/w/index.php?curid=86122637">Wikimedia Commons</a>
+          </p>
+        </div>
+
+        <!-- ── Neutral position ────────────────────────────── -->
+        <h2>Neutral position</h2>
+        <p>
+          When there is no flexion, extension, ulnar or radial deviation, we refer to this position as "neutral". In the neutral position, the wrist is not bent in any direction, and there is a straight (or almost straight line) running from the forearm through the wrist, to the hand and the third finger (fig. 9). We can consider the third finger as a point of reference for the "middle" of the hand.
+        </p>
+
+        <div class="figure">
+          <img src="../images/Neutral position.png" alt="Neutral position" />
+          <div class="figure__caption">Fig. 9: Neutral position.</div>
+        </div>
+
+        <p>
+          This is generally considered the safest and most comfortable resting position for the wrist, reducing the risk of repetitive strain injuries that can occur from maintaining the wrist in flexed, extended, or deviated positions for long periods of time.
+        </p>
+        <p>
+          The voluntary exertion of any of the movements we described (flexion, extension, ulnar and radial deviation) will require the activation of different muscle groups in order to move the wrist away from a neutral position. This should not be confused with the wrist being bent as a consequence of gravity, in which case the movement is not caused by the action of the muscles.
+        </p>
+
+        <!-- ── Wrist deviation at the piano ────────────────── -->
+        <h2>Wrist deviation at the piano</h2>
+
+        <div class="content-split content-split--text-wide">
+          <div class="figure">
+            <img src="../images/Radial deviation when thumb crossing.png" alt="Radial deviation when thumb crossing at the piano" />
+            <div class="figure__caption">Fig. 10: Radial deviation when thumb crossing.</div>
+          </div>
+          <p>
+            At the piano, radial deviation is particularly common, especially during passages that involve the thumb crossing under the palm, or when the fingers cross over the thumb (as it happens during scale playing, fig. 10). This movement helps to reduce the need for extreme thumb flexion.
+          </p>
+          <p>
+            Ulnar and radial deviation are more pronounced whenever the hands need to move to an unusual register other than the one naturally available in a neutral position. For the left hand, radial deviation is increased when the hand reaches to the far end of the lower register of the piano (to the left, fig. 11), and ulnar deviation when the hand goes beyond the center to a higher register of the piano (to the right, fig. 12).
+          </p>
+        </div>
+
+        <div class="figure-row">
+          <div class="figure">
+            <img src="../images/Radial deviation of left hand.png" alt="Radial deviation of left hand" />
+            <div class="figure__caption">Fig. 11: Radial deviation of left hand.</div>
+          </div>
+          <div class="figure">
+            <img src="../images/Ulnar deviation of left hand.png" alt="Ulnar deviation of left hand" />
+            <div class="figure__caption">Fig. 12: Ulnar deviation of left hand.</div>
+          </div>
+        </div>
+
+        <p>
+          With the right hand, the opposite is true: radial deviation is more prominent when reaching to the far end of the higher register (to the right, fig. 13), and ulnar deviation when the hand moves beyond the center towards the lower register of the piano (to the left, fig. 14).
+        </p>
+
+        <div class="figure-row">
+          <div class="figure">
+            <img src="../images/Radial deviation of right hand.png" alt="Radial deviation of right hand" />
+            <div class="figure__caption">Fig. 13: Radial deviation of right hand.</div>
+          </div>
+          <div class="figure">
+            <img src="../images/Ulnar deviation of right hand.png" alt="Ulnar deviation of right hand" />
+            <div class="figure__caption">Fig. 14: Ulnar deviation of right hand.</div>
+          </div>
+        </div>
+
+        <div class="content-split content-split--text-narrow content-split--image-left">
+          <div class="figure">
+            <img src="../images/Fingering adjustment to reduce radial deviation.png" alt="Fingering adjustment to reduce radial deviation" />
+            <div class="figure__caption">Fig. 15: Fingering adjustment to reduce radial deviation.</div>
+          </div>
+          <p>
+            Both gestures require an effort which is more strenuous than keeping the hand aligned with the wrist. Recognizing when this happens is crucial to adjust technique and reduce any unnecessary stress imposed to our anatomy.
+          </p>
+          <p>
+            For example, when the hand reaches the far end of the piano, we can adjust our fingering in favor of the thumb, index, and middle finger, reducing radial deviation when compared to using the fourth and fifth fingers. This means our fingers would be at an angle in relation to the keys, but closer to a neutral position in relation to the wrist (fig. 15).
+          </p>
+        </div>
+
+        <!-- ── Real life example ───────────────────────────── -->
+        <h2>A real life example</h2>
+        <p>
+          Now let's discuss a real-life occurrence of ulnar and radial deviation. In Chopin &Eacute;tude Op. 25 Nr. 3, you'll notice through the score an emphasis on using the third finger repeatedly in both hands (fig. 16). I highly encourage you to try this example yourself (you don't need to play at speed if you are not ready for it yet).
+        </p>
+
+        <div class="sheet-music">
+          <img src="../images/Chopin Etude Op 25 Nr 3 (opening).png" alt="Chopin Etude Op. 25 Nr. 3 (opening)" />
+          <div class="sheet-music__caption">Fig. 16: Opening bars of &Eacute;tude Op. 25 Nr. 3 by Fr&eacute;d&eacute;ric Chopin.</div>
+        </div>
+
+        <p>
+          In both hands the third finger is strategically placed at the middle of the group of notes involved in the passage. The result is the third finger acting as an axis from where the hand bends to reach the notes either up or down in the note group (or left and right at the piano).
+        </p>
+        <p>
+          You can see an extreme example at the beginning of the second measure in the left hand, where there is a minor seventh interval between C3 and B&#x266D;3, played by the third finger and the thumb. It is not possible to play this without ulnar deviation (fig. 17).
+        </p>
+
+        <div class="sheet-music">
+          <img src="../images/Ulnar deviation in Chopin Etude Op 25 Nr 3 (m. 1 - 2).png" alt="Ulnar deviation in Chopin Etude Op. 25 Nr. 3" />
+          <div class="sheet-music__caption">Fig. 17: Ulnar deviation in Chopin &Eacute;tude Op. 25 Nr. 3 (m. 1–2).</div>
+        </div>
+
+        <p>
+          Later on, the left hand needs to twist to reach the lower F2. Since the C3 played by the third finger is repeated multiple times it is convenient to leave it in place and not move it. In this case the resulting movement is radial deviation (fig. 18).
+        </p>
+
+        <div class="sheet-music">
+          <img src="../images/Radial deviation in Chopin Etude Op 25 Nr 3 (m. 1 - 2).png" alt="Radial deviation in Chopin Etude Op. 25 Nr. 3" />
+          <div class="sheet-music__caption">Fig. 18: Radial deviation in Chopin &Eacute;tude Op. 25 Nr. 3 (m. 1–2).</div>
+        </div>
+
+        <p>
+          Without any additional context, it is not clear whether Chopin devised this intentionally or is it a mere consequence of the fingering suggested in the score. Furthermore, it is not guaranteed that this fingering was written by Chopin himself, or added later by the sheet music editorial. Whatever the case, since this pattern is repeated all throughout the score, and the intent of the piece is technical in nature (even though the &Eacute;tudes are highly regarded as artistic pieces in their own right) it is safe to assume that one of the purposes of the piece is to consciously practice these movements.
+        </p>
+
+        <!-- ── Closing thoughts ────────────────────────────── -->
+        <h2>Closing thoughts</h2>
+        <p>
+          Having a proper understanding of the anatomical movements of the wrist, it is possible to describe with precision how and when these movements happen during a passage. We can then analyze how fingering affects movement, and whether a specific fingering mitigates or exacerbates a particular gesture. From then on, we can make adjustments aiming for fluidity of movement and reduction of effort.
+        </p>
+        <p>
+          As you practice, if you pay attention to these aspects of technique, you'll start realizing what changes can be made to reduce tension. Don't be shy about discussing your observations with your piano instructor, and seek advice from a physiotherapist if you find there are movements which cause too much tension or discomfort. I highly recommend analyzing video recordings of piano performances where you can see the hands. By analyzing the movements of other pianists and comparing them to your own, you may gain precious insights.
+        </p>
+        <p>
+          It is worth noting that it isn't always the case that specific types of movements should always be avoided. As we've seen in the example of thumb crossing, some radial deviation would be preferred to extreme thumb flexion. Some people may feel more comfortable performing certain types of movements than others. An exaggerated gesture can be justified, provided it is not repeated consecutively and contributes to the overall fluidity of movement. We always need to assess trade-offs, mitigation strategies, and conveniences when adjusting technique. You'll have to apply your own judgment to decide whether some change is necessary in your own playing. Equipped with this knowledge, I hope you will be able to do so.
+        </p>
+
+      </div>
+    </article>
+
+    <!-- ── Author card ─────────────────────────────────────── -->
+    <section class="article-footer">
+      <div class="container">
+        <div class="author-card">
+          <div class="author-card__avatar">AP</div>
+          <div>
+            <div class="author-card__name">Amy Pellegrini</div>
+            <div class="author-card__bio">
+              AI Product Engineer &amp; Tech Lead based in Barcelona.
+              When not building agentic AI workflows, Amy writes about piano technique and music theory.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Related articles ────────────────────────────────── -->
+    <section class="related">
+      <div class="container">
+        <p class="related__title">// more writing</p>
+        <a href="#" class="related__item">
+          <div class="related__item-title">Successful Design Systems</div>
+          <div class="related__item-desc">
+            Practical notes on building reusable component libraries &mdash;
+            emergent design, flat structures, utility classes, and color tokens.
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ── Footer ────────────────────────────────────────────── -->
+    <footer>
+      <div class="container">
+        <div class="footer__contact">
+          <a href="mailto:amyvpellegrini@gmail.com">
+            amyvpellegrini@gmail.com
+          </a>
+          <a href="https://github.com/amypellegrini" target="_blank">
+            github.com/amypellegrini
+          </a>
+          <a
+            href="https://bsky.app/profile/amypellegrini.bsky.social"
+            target="_blank"
+          >
+            @amypellegrini.bsky.social
+          </a>
+          <span style="color: var(--text-muted); font-size: 0.85rem">
+            Barcelona, Spain
+          </span>
+        </div>
+        <p class="footer__copy">
+          &copy; 2025 Amy Pellegrini. Spanish (native) &middot; English
+          (bilingual professional proficiency).
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
