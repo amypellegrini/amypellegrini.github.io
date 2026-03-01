@@ -433,21 +433,29 @@
         border-top: 1px solid var(--border);
       }
 
-      /* ── Two-column layout (text + image) ──────────────────── */
+      /* ── Text wrapping around image ──────────────────────── */
       .content-split {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1.5rem;
-        align-items: start;
         margin: 2rem 0;
+        overflow: hidden;
       }
 
-      .content-split--text-wide {
-        grid-template-columns: 2fr 1fr;
+      .content-split .figure {
+        width: 45%;
+        margin: 0 0 1rem 1.5rem;
+        float: right;
       }
 
-      .content-split--text-narrow {
-        grid-template-columns: 1fr 1fr;
+      .content-split--text-narrow .figure {
+        width: 45%;
+      }
+
+      .content-split--text-wide .figure {
+        width: 35%;
+      }
+
+      .content-split--image-left .figure {
+        float: left;
+        margin: 0 1.5rem 1rem 0;
       }
 
       .content-split p {
@@ -456,10 +464,6 @@
 
       .content-split p:last-child {
         margin-bottom: 0;
-      }
-
-      .content-split .figure {
-        margin: 0;
       }
 
       /* ── Article footer / author card ──────────────────────── */
@@ -606,10 +610,10 @@
           gap: 1rem;
         }
 
-        .content-split,
-        .content-split--text-wide,
-        .content-split--text-narrow {
-          grid-template-columns: 1fr;
+        .content-split .figure {
+          float: none;
+          width: 100%;
+          margin: 0 0 1rem 0;
         }
 
         .nav__links {
@@ -781,18 +785,16 @@
         <h2>Wrist deviation at the piano</h2>
 
         <div class="content-split content-split--text-wide">
-          <div>
-            <p>
-              At the piano, radial deviation is particularly common, especially during passages that involve the thumb crossing under the palm, or when the fingers cross over the thumb (as it happens during scale playing, fig. 10). This movement helps to reduce the need for extreme thumb flexion.
-            </p>
-            <p>
-              Ulnar and radial deviation are more pronounced whenever the hands need to move to an unusual register other than the one naturally available in a neutral position. For the left hand, radial deviation is increased when the hand reaches to the far end of the lower register of the piano (to the left, fig. 11), and ulnar deviation when the hand goes beyond the center to a higher register of the piano (to the right, fig. 12).
-            </p>
-          </div>
           <div class="figure">
             <img src="../images/Radial deviation when thumb crossing.png" alt="Radial deviation when thumb crossing at the piano" />
             <div class="figure__caption">Fig. 10: Radial deviation when thumb crossing.</div>
           </div>
+          <p>
+            At the piano, radial deviation is particularly common, especially during passages that involve the thumb crossing under the palm, or when the fingers cross over the thumb (as it happens during scale playing, fig. 10). This movement helps to reduce the need for extreme thumb flexion.
+          </p>
+          <p>
+            Ulnar and radial deviation are more pronounced whenever the hands need to move to an unusual register other than the one naturally available in a neutral position. For the left hand, radial deviation is increased when the hand reaches to the far end of the lower register of the piano (to the left, fig. 11), and ulnar deviation when the hand goes beyond the center to a higher register of the piano (to the right, fig. 12).
+          </p>
         </div>
 
         <div class="figure-row">
@@ -821,19 +823,17 @@
           </div>
         </div>
 
-        <div class="content-split content-split--text-narrow">
+        <div class="content-split content-split--text-narrow content-split--image-left">
           <div class="figure">
             <img src="../images/Fingering adjustment to reduce radial deviation.png" alt="Fingering adjustment to reduce radial deviation" />
             <div class="figure__caption">Fig. 15: Fingering adjustment to reduce radial deviation.</div>
           </div>
-          <div>
-            <p>
-              Both gestures require an effort which is more strenuous than keeping the hand aligned with the wrist. Recognizing when this happens is crucial to adjust technique and reduce any unnecessary stress imposed to our anatomy.
-            </p>
-            <p>
-              For example, when the hand reaches the far end of the piano, we can adjust our fingering in favor of the thumb, index, and middle finger, reducing radial deviation when compared to using the fourth and fifth fingers. This means our fingers would be at an angle in relation to the keys, but closer to a neutral position in relation to the wrist (fig. 15).
-            </p>
-          </div>
+          <p>
+            Both gestures require an effort which is more strenuous than keeping the hand aligned with the wrist. Recognizing when this happens is crucial to adjust technique and reduce any unnecessary stress imposed to our anatomy.
+          </p>
+          <p>
+            For example, when the hand reaches the far end of the piano, we can adjust our fingering in favor of the thumb, index, and middle finger, reducing radial deviation when compared to using the fourth and fifth fingers. This means our fingers would be at an angle in relation to the keys, but closer to a neutral position in relation to the wrist (fig. 15).
+          </p>
         </div>
 
         <!-- ── Real life example ───────────────────────────── -->

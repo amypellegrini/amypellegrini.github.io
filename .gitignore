@@ -1,4 +1,5 @@
 .DS_Store
 node_modules
 _site
-design\cv_draft.md
+.claude/
+design/cv_draft.md
