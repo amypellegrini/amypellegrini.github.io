@@ -15,8 +15,8 @@
   --border: #1e1e2e;
   --border-accent: #2a2a3e;
   --text-primary: #e4e4ef;
-  --text-secondary: #9393a8;
-  --text-muted: #5e5e74;
+  --text-secondary: #b4b4c7;
+  --text-muted: #8a8aa0;
   --accent: #6c63ff;
   --accent-dim: #4a43cc;
   --accent-glow: rgba(108, 99, 255, 0.15);
@@ -316,7 +316,7 @@ section + section {
 }
 
 .skill-card__body {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: var(--text-secondary);
   line-height: 1.6;
 }
@@ -392,7 +392,7 @@ section + section {
 }
 
 .timeline__details li {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: var(--text-secondary);
   line-height: 1.6;
   padding-left: 1rem;
@@ -453,7 +453,7 @@ section + section {
 }
 
 .project-card__desc {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: var(--text-secondary);
   line-height: 1.65;
   margin-bottom: 1rem;
@@ -508,7 +508,7 @@ section + section {
 }
 
 .talk-item__meta {
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   color: var(--text-muted);
 }
 
@@ -539,7 +539,7 @@ section + section {
 }
 
 .article-item__desc {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 0.5rem;
