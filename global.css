@@ -176,6 +176,27 @@ nav {
   overflow: hidden;
 }
 
+.hero__layout {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
+  align-items: center;
+  gap: 3rem;
+}
+
+.hero__portrait {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  border: 1px solid var(--border-accent);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.3);
+}
+
 .hero__content {
   position: relative;
   z-index: 1;
@@ -1019,6 +1040,16 @@ footer {
 
 /* ── Responsive ────────────────────────────────────────── */
 @media (max-width: 768px) {
+  .hero__layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .hero__portrait {
+    grid-row: 1;
+    width: min(60vw, 240px);
+  }
+
   .hero {
     min-height: auto;
     padding-top: 6rem;
