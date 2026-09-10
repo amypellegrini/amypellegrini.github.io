@@ -8,6 +8,35 @@
 }
 
 :root {
+  color-scheme: light;
+  --bg-primary: #fafafe;
+  --bg-secondary: #f0f0f8;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f3f2fc;
+  --border: #dedeea;
+  --border-accent: #c7c7db;
+  --text-primary: #202031;
+  --text-secondary: #505066;
+  --text-muted: #68687e;
+  --accent: #5746d6;
+  --accent-dim: #4a3abb;
+  --accent-glow: rgba(87, 70, 214, 0.09);
+  --accent-secondary: #007f68;
+  --accent-secondary-dim: rgba(0, 127, 104, 0.09);
+  --red: #c62b49;
+  --nav-bg: rgba(250, 250, 254, 0.85);
+  --accent-hover: #4130b5;
+  --syntax-comment: #68687e;
+  --syntax-string: #397328;
+  --syntax-number: #995017;
+  --syntax-keyword: #7841a3;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+  --font-serif: "EB Garamond", "Georgia", "Times New Roman", serif;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
   --bg-primary: #0a0a0f;
   --bg-secondary: #12121a;
   --bg-card: #16161f;
@@ -23,9 +52,39 @@
   --accent-secondary: #00d4aa;
   --accent-secondary-dim: rgba(0, 212, 170, 0.12);
   --red: #ff4d6a;
-  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-mono: "JetBrains Mono", "Fira Code", monospace;
-  --font-serif: "EB Garamond", "Georgia", "Times New Roman", serif;
+  --nav-bg: rgba(10, 10, 15, 0.8);
+  --accent-hover: #8b84ff;
+  --syntax-comment: #9999ad;
+  --syntax-string: #9ccc80;
+  --syntax-number: #f0a878;
+  --syntax-keyword: #c4a0e8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-card: #16161f;
+    --bg-card-hover: #1c1c28;
+    --border: #1e1e2e;
+    --border-accent: #2a2a3e;
+    --text-primary: #e4e4ef;
+    --text-secondary: #b4b4c7;
+    --text-muted: #8a8aa0;
+    --accent: #6c63ff;
+    --accent-dim: #4a43cc;
+    --accent-glow: rgba(108, 99, 255, 0.15);
+    --accent-secondary: #00d4aa;
+    --accent-secondary-dim: rgba(0, 212, 170, 0.12);
+    --red: #ff4d6a;
+    --nav-bg: rgba(10, 10, 15, 0.8);
+    --accent-hover: #8b84ff;
+    --syntax-comment: #9999ad;
+    --syntax-string: #9ccc80;
+    --syntax-number: #f0a878;
+    --syntax-keyword: #c4a0e8;
+  }
 }
 
 html {
@@ -48,7 +107,7 @@ a {
 }
 
 a:hover {
-  color: #8b84ff;
+  color: var(--accent-hover);
 }
 
 ::selection {
@@ -126,7 +185,7 @@ nav {
   z-index: 100;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  background: rgba(10, 10, 15, 0.8);
+  background: var(--nav-bg);
   border-bottom: 1px solid var(--border);
 }
 
@@ -152,7 +211,7 @@ nav {
 
 .nav__links {
   display: flex;
-  gap: 2rem;
+  gap: 1.25rem;
   list-style: none;
 }
 
@@ -165,6 +224,110 @@ nav {
 
 .nav__links a:hover {
   color: var(--text-primary);
+}
+
+/* Keep the theme control available when mobile navigation is hidden. */
+.nav__inner {
+  gap: 1rem;
+}
+
+.sr-only,
+.theme-control input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.theme-control {
+  display: flex;
+  flex-shrink: 0;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid var(--border-accent);
+  border-radius: 10px;
+  background: var(--bg-secondary);
+}
+
+.theme-control[hidden] {
+  display: none;
+}
+
+.theme-control__option {
+  position: relative;
+  cursor: pointer;
+}
+
+.theme-control__button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  min-width: 46px;
+  min-height: 44px;
+  padding: 4px 6px;
+  border-radius: 6px;
+  color: var(--text-muted);
+  font: 500 0.625rem var(--font-sans);
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.theme-control svg {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.theme-control__option:hover .theme-control__button {
+  color: var(--text-primary);
+  background: var(--bg-card-hover);
+}
+
+.theme-control input:checked + .theme-control__button {
+  color: var(--accent);
+  background: var(--bg-card);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), inset 0 0 0 1px var(--border-accent);
+}
+
+.theme-control input:focus-visible + .theme-control__button {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (max-width: 1024px) {
+  .nav__links {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .nav__inner {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  body .hero, body .article-header {
+    padding-top: 8rem;
+  }
+
+  .nav__inner {
+    padding-inline: 1rem;
+    gap: 0.5rem;
+  }
+
+  .nav__brand {
+    font-size: 0.75rem;
+  }
 }
 
 /* ── Hero ─────────────────────────────────────────────── */
@@ -1015,10 +1178,11 @@ footer {
   color: var(--text-muted);
 }
 
-/* ── Prism dark theme overrides ────────────────────────── */
+/* ── Theme-aware syntax highlighting ────────────────────────── */
 .article-body pre[class*="language-"] {
   border-radius: 8px;
   border: 1px solid var(--border);
+  background: var(--bg-secondary);
   margin: 2rem 0;
   font-size: 0.85rem;
 }
@@ -1037,6 +1201,33 @@ footer {
   padding: 0.15em 0.4em;
   color: var(--accent);
 }
+
+.article-body code[class*="language-"],
+.article-body pre[class*="language-"] {
+  color: var(--text-primary);
+  text-shadow: none;
+}
+
+.article-body .token { color: var(--text-primary); }
+.article-body .token.comment,
+.article-body .token.prolog,
+.article-body .token.doctype,
+.article-body .token.cdata { color: var(--syntax-comment); }
+.article-body .token.string,
+.article-body .token.char,
+.article-body .token.attr-value,
+.article-body .token.regex { color: var(--syntax-string); }
+.article-body .token.number,
+.article-body .token.boolean,
+.article-body .token.constant { color: var(--syntax-number); }
+.article-body .token.keyword,
+.article-body .token.atrule,
+.article-body .token.selector { color: var(--syntax-keyword); }
+.article-body .token.function,
+.article-body .token.tag,
+.article-body .token.property,
+.article-body .token.attr-name,
+.article-body .token.class-name { color: var(--accent); }
 
 /* ── Responsive ────────────────────────────────────────── */
 @media (max-width: 768px) {
