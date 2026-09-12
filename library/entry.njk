@@ -1,0 +1,25 @@
+---
+layout: default
+pagination:
+  data: library.entries
+  size: 1
+  alias: entry
+permalink: "/library/{{ entry.id }}/"
+eleventyComputed:
+  title: "{{ entry.name }} · {{ entry.category }} · Skills Library"
+---
+<link rel="stylesheet" href="/library/library.css">
+<main class="library library-detail container" id="main-content">
+<a class="library-back" href="/library/">← All skills & agents</a>
+<header><p class="library-eyebrow">{{ entry.category }} / {{ entry.runtime }} / {{ entry.kind }}</p><h1>{{ entry.name }}</h1><p class="library-detail-description">{{ entry.description | skillInline | safe }}</p></header>
+<section class="library-detail-setup"><h2>{{ 'Install this skill' if entry.kind == 'skill' else 'Set up this agent' }}</h2>
+{% if entry.install %}<div class="library-command"><pre><code>{{ entry.install | escape }}</code></pre><button type="button" data-copy>Copy</button></div><p>Run inside your target project after this library is published. <a href="/library/#install">Installation guide and local preview →</a></p>
+{% else %}<p>Download the packaged definition below and save it to <code>.claude/agents/{{ entry.name }}.md</code> in your target project. Review any existing file before replacing it. Companion skills are optional; the agent includes a direct-execution fallback. The Skills CLI does not install agent definitions.</p>{% endif %}
+<p class="library-file-links"><a class="library-button" href="{{ entry.file }}" download>Download {{ 'SKILL.md' if entry.kind == 'skill' else entry.name + '.md' }} ↓</a><a href="{{ entry.source.url }}">View source on GitHub ↗</a></p>
+<p class="library-note">This workflow discovers the target repository’s tools and conventions at use time. Read the instructions for its scope and required evidence.</p>
+
+</section>
+<section class="library-instructions"><div class="library-section-heading"><h2>The instructions</h2><span>{{ entry.runtime }}</span></div><div class="library-markdown">{{ entry.body | skillMarkdown | safe }}</div></section>
+<details class="library-provenance"><summary>Definition metadata & checksum</summary><dl><dt>Source path</dt><dd>{{ entry.source.path }}</dd><dt>SHA-256</dt><dd>{{ entry.sha256 }}</dd></dl></details>
+</main>
+<script src="/library/library.js" defer></script>

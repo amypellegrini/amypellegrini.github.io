@@ -1,0 +1,561 @@
+{
+  "schemaVersion": 2,
+  "title": "Amy Pellegrini’s workflow",
+  "description": "The skills and agents I use in my own development workflow, shared with rough edges and refined as I learn. Adapt them to your own repository.",
+  "categories": [
+    "Delivery",
+    "Development",
+    "Orchestration",
+    "Planning",
+    "Quality",
+    "Review"
+  ],
+  "entries": [
+    {
+      "id": "skill--address-pr-comments",
+      "name": "address-pr-comments",
+      "kind": "skill",
+      "category": "Review",
+      "runtime": "portable",
+      "description": "Triage pull-request feedback, implement justified changes, and draft evidence-backed replies.",
+      "metadata": {
+        "name": "address-pr-comments",
+        "description": "Triage pull-request feedback, implement justified changes, and draft evidence-backed replies.",
+        "metadata": {
+          "category": "Review"
+        }
+      },
+      "file": "/skills/address-pr-comments/SKILL.md",
+      "sha256": "a9a1dee61b1f34ec75429cf06749800192d43c8c5100a7133bd2f0f58cfa5cf6",
+      "source": {
+        "path": "skills/address-pr-comments/SKILL.md",
+        "url": "https://github.com/amypellegrini/amypellegrini.github.io/blob/main/skills/address-pr-comments/SKILL.md"
+      },
+      "install": "npx skills add amypellegrini/amypellegrini.github.io --skill address-pr-comments",
+      "detail": "/library/skill--address-pr-comments/"
+    },
+    {
+      "id": "skill--assess-ci",
+      "name": "assess-ci",
+      "kind": "skill",
+      "category": "Quality",
+      "runtime": "portable",
+      "description": "Audit the repository’s CI coverage against its documented quality requirements and report evidence-backed gaps.",
+      "metadata": {
+        "name": "assess-ci",
+        "description": "Audit the repository’s CI coverage against its documented quality requirements and report evidence-backed gaps.",
+        "metadata": {
+          "category": "Quality"
+        }
+      },
+      "file": "/skills/assess-ci/SKILL.md",
+      "sha256": "e4da2d6764c97876be5544b8e6eaa9102bf21665b07d88c2bf95f2f6470b2d18",
+      "source": {
+        "path": "skills/assess-ci/SKILL.md",
+        "url": "https://github.com/amypellegrini/amypellegrini.github.io/blob/main/skills/assess-ci/SKILL.md"
+      },
+      "install": "npx skills add amypellegrini/amypellegrini.github.io --skill assess-ci",
+      "detail": "/library/skill--assess-ci/"
+    },
+    {
+      "id": "skill--assess-pre-commit",
+      "name": "assess-pre-commit",
+      "kind": "skill",
+      "category": "Quality",
+      "runtime": "portable",
+      "description": "Inspect local commit hooks and report what they enforce, how they run, and where checks can be bypassed.",
+      "metadata": {
+        "name": "assess-pre-commit",
+        "description": "Inspect local commit hooks and report what they enforce, how they run, and where checks can be bypassed.",
+        "metadata": {
+          "category": "Quality"
+        }
+      },
+      "file": "/skills/assess-pre-commit/SKILL.md",
+      "sha256": "d5fbccc93089239d8160250effbb6695c0c55ef59db1cb155bc011bfd55499b3",
+      "source": {
+        "path": "skills/assess-pre-commit/SKILL.md",
+        "url": "https://github.com/amypellegrini/amypellegrini.github.io/blob/main/skills/assess-pre-commit/SKILL.md"
+      },
+      "install": "npx skills add amypellegrini/amypellegrini.github.io --skill assess-pre-commit",
+      "detail": "/library/skill--assess-pre-commit/"
+    },
+    {
+      "id": "skill--assess-test-pyramid",
+      "name": "assess-test-pyramid",
+      "kind": "skill",
+      "category": "Quality",
+      "runtime": "portable",
+      "description": "Assess test distribution and meaningful coverage using the repository’s own testing strategy.",
+      "metadata": {
+        "name": "assess-test-pyramid",
+        "description": "Assess test distribution and meaningful coverage using the repository’s own testing strategy.",
+        "metadata": {
+          "category": "Quality"
+        }
+      },
+      "file": "/skills/assess-test-pyramid/SKILL.md",
+      "sha256": "d7e7f3dd128937d3d325c1ddbd5c7ca5f06ca0159676ed79aec2ce3324a4d558",
+      "source": {
+        "path": "skills/assess-test-pyramid/SKILL.md",
+        "url": "https://github.com/amypellegrini/amypellegrini.github.io/blob/main/skills/assess-test-pyramid/SKILL.md"
+      },
+      "install": "npx skills add amypellegrini/amypellegrini.github.io --skill assess-test-pyramid",
+      "detail": "/library/skill--assess-test-pyramid/"
+    },
+    {
+      "id": "skill--business-analyst",
+      "name": "business-analyst",
+      "kind": "skill",
+      "category": "Planning",
+      "runtime": "portable",
+      "description": "Refine or triage issues into clear business value, scope, acceptance criteria, and verification steps.",
+      "metadata": {
+        "name": "business-analyst",
+        "description": "Refine or triage issues into clear business value, scope, acceptance criteria, and verification steps.",
+        "metadata": {
+          "category": "Planning"
+        }
+      },
+      "file": "/skills/business-analyst/SKILL.md",
+      "sha256": "214f769b116ebb4327f3badfe65a69573f7b43283a5ecfbba99fb8b3c3d32c8b",
+      "source": {
+        "path": "skills/business-analyst/SKILL.md",
+        "url": "https://github.com/amypellegrini/amypellegrini.github.io/blob/main/skills/business-analyst/SKILL.md"
+      },
+      "install": "npx skills add amypellegrini/amypellegrini.github.io --skill business-analyst",
+      "detail": "/library/skill--business-analyst/"
+    },
+    {
+      "id": "skill--check-ci",
+      "name": "check-ci",
+      "kind": "skill",
+      "category": "Quality",
+      "runtime": "portable",
+      "description": "Inspect checks on a pull request’s current commit and report a clear CI verdict.",
+      "metadata": {
+        "name": "check-ci",
+        "description": "Inspect checks on a pull request’s current commit and report a clear CI verdict.",
+        "metadata": {
+          "category": "Quality"
+        }
+      },
+      "file": "/skills/check-ci/SKILL.md",
+      "sha256": "6b366c8b5039cf05990a2623de1bf0cb66e26d0e5674f005a0b39d97e87f52e8",
+      "source": {
+        "path": "skills/check-ci/SKILL.md",
+        "url": "https://github.com/amypellegrini/amypellegrini.github.io/blob/main/skills/check-ci/SKILL.md"
+      },
+      "install": "npx skills add amypellegrini/amypellegrini.github.io --skill check-ci",
+      "detail": "/library/skill--check-ci/"
+    },
+    {
+      "id": "skill--close-issue",
+      "name": "close-issue",
+      "kind": "skill",
+      "category": "Delivery",
+      "runtime": "portable",
+      "description": "Verify completion and merge an authorized pull request before confirming its issue is resolved.",
+      "metadata": {
+        "name": "close-issue",
+        "description": "Verify completion and merge an authorized pull request before confirming its issue is resolved.",
+        "metadata": {
+          "category": "Delivery"
+        }
+      },
+      "file": "/skills/close-issue/SKILL.md",
+      "sha256": "60f5c9bf1e43a67fbfc15a30a1727c984215b99e40cb78fbe0c223e2dd544c09",
+      "source": {
+        "path": "skills/close-issue/SKILL.md",
+        "url": "https://github.com/amypellegrini/amypellegrini.github.io/blob/main/skills/close-issue/SKILL.md"
+      },
+      "install": "npx skills add amypellegrini/amypellegrini.github.io --skill close-issue",
+      "detail": "/library/skill--close-issue/"
+    },
+    {
+      "id": "skill--commit",
+      "name": "commit",
+      "kind": "skill",
+      "category": "Delivery",
+      "runtime": "portable",
+      "description": "Create focused Git commits with accurate messages and verification appropriate to the change.",
+      "metadata": {
+        "name": "commit",
+        "description": "Create focused Git commits with accurate messages and verification appropriate to the change.",
+        "metadata": {
+          "category": "Delivery"
+        }
+      },
+      "file": "/skills/commit/SKILL.md",
+      "sha256": "5bc90b9afbf14515e1fa2c367e27579bef970a0b9893b64021d1ac6dcc890086",
+      "source": {
+        "path": "skills/commit/SKILL.md",
+        "url": "https://github.com/amypellegrini/amypellegrini.github.io/blob/main/skills/commit/SKILL.md"
+      },
+      "install": "npx skills add amypellegrini/amypellegrini.github.io --skill commit",
+      "detail": "/library/skill--commit/"
+    },
+    {
+      "id": "skill--commit-and-push",
+      "name": "commit-and-push",
+      "kind": "skill",
+      "category": "Delivery",
+      "runtime": "portable",
+      "description": "Commit the requested changes and push the intended branch while respecting remote and branch protections.",
+      "metadata": {
+        "name": "commit-and-push",
+        "description": "Commit the requested changes and push the intended branch while respecting remote and branch protections.",
+        "metadata": {
+          "category": "Delivery"
+        }
+      },
+      "file": "/skills/commit-and-push/SKILL.md",
+      "sha256": "ac9ededfcadda5ef4662be0566c3eb19b25d67552e8c586b91e74004f1daf049",
+      "source": {
+        "path": "skills/commit-and-push/SKILL.md",
+        "url": "https://github.com/amypellegrini/amypellegrini.github.io/blob/main/skills/commit-and-push/SKILL.md"
+      },
+      "install": "npx skills add amypellegrini/amypellegrini.github.io --skill commit-and-push",
+      "detail": "/library/skill--commit-and-push/"
+    },
+    {
+      "id": "skill--desk-check",
+      "name": "desk-check",
+      "kind": "skill",
+      "category": "Review",
+      "runtime": "portable",
+      "description": "Demonstrate work in progress, collect criterion-level feedback, and preserve what was actually reviewed.",
+      "metadata": {
+        "name": "desk-check",
+        "description": "Demonstrate work in progress, collect criterion-level feedback, and preserve what was actually reviewed.",
+        "metadata": {
+          "category": "Review"
+        }
+      },
+      "file": "/skills/desk-check/SKILL.md",
+      "sha256": "e9093fe097a0ae23c3c9c0732767edfe96b138aeb6149e2411e34879e5e20d5b",
+      "source": {
+        "path": "skills/desk-check/SKILL.md",
+        "url": "https://github.com/amypellegrini/amypellegrini.github.io/blob/main/skills/desk-check/SKILL.md"
+      },
+      "install": "npx skills add amypellegrini/amypellegrini.github.io --skill desk-check",
+      "detail": "/library/skill--desk-check/"
+    },
+    {
+      "id": "skill--dev",
+      "name": "dev",
+      "kind": "skill",
+      "category": "Development",
+      "runtime": "portable",
+      "description": "Drive a scoped feature through implementation, validation, and a reviewable handoff using the target repository’s conventions.",
+      "metadata": {
+        "name": "dev",
+        "description": "Drive a scoped feature through implementation, validation, and a reviewable handoff using the target repository’s conventions.",
+        "metadata": {
+          "category": "Development"
+        }
+      },
+      "file": "/skills/dev/SKILL.md",
+      "sha256": "6cf2f48a4175ecc3d86eb3742569cb335d79ec60e8cead08d2e989e05438548c",
+      "source": {
+        "path": "skills/dev/SKILL.md",
+        "url": "https://github.com/amypellegrini/amypellegrini.github.io/blob/main/skills/dev/SKILL.md"
+      },
+      "install": "npx skills add amypellegrini/amypellegrini.github.io --skill dev",
+      "detail": "/library/skill--dev/"
+    },
+    {
+      "id": "skill--open-pr",
+      "name": "open-pr",
+      "kind": "skill",
+      "category": "Delivery",
+      "runtime": "portable",
+      "description": "Open a pull request with a focused description, the correct base branch, and relevant validation evidence.",
+      "metadata": {
+        "name": "open-pr",
+        "description": "Open a pull request with a focused description, the correct base branch, and relevant validation evidence.",
+        "metadata": {
+          "category": "Delivery"
+        }
+      },
+      "file": "/skills/open-pr/SKILL.md",
+      "sha256": "069f8b196bc1331ff0723e749f97999f63341ec73c07f27fe3e46f38b55cb44b",
+      "source": {
+        "path": "skills/open-pr/SKILL.md",
+        "url": "https://github.com/amypellegrini/amypellegrini.github.io/blob/main/skills/open-pr/SKILL.md"
+      },
+      "install": "npx skills add amypellegrini/amypellegrini.github.io --skill open-pr",
+      "detail": "/library/skill--open-pr/"
+    },
+    {
+      "id": "skill--parallel-dev",
+      "name": "parallel-dev",
+      "kind": "skill",
+      "category": "Development",
+      "runtime": "portable",
+      "description": "Coordinate multiple independent work items with isolated working trees and explicit per-item handoffs.",
+      "metadata": {
+        "name": "parallel-dev",
+        "description": "Coordinate multiple independent work items with isolated working trees and explicit per-item handoffs.",
+        "metadata": {
+          "category": "Development"
+        }
+      },
+      "file": "/skills/parallel-dev/SKILL.md",
+      "sha256": "a702d19ed3082a187ca85cc7fea5f1ce179560df938e6242c0dfde7c8590c677",
+      "source": {
+        "path": "skills/parallel-dev/SKILL.md",
+        "url": "https://github.com/amypellegrini/amypellegrini.github.io/blob/main/skills/parallel-dev/SKILL.md"
+      },
+      "install": "npx skills add amypellegrini/amypellegrini.github.io --skill parallel-dev",
+      "detail": "/library/skill--parallel-dev/"
+    },
+    {
+      "id": "skill--parallel-pr-review",
+      "name": "parallel-pr-review",
+      "kind": "skill",
+      "category": "Review",
+      "runtime": "portable",
+      "description": "Review multiple pull requests in isolated checkouts and combine findings into a ranked report.",
+      "metadata": {
+        "name": "parallel-pr-review",
+        "description": "Review multiple pull requests in isolated checkouts and combine findings into a ranked report.",
+        "metadata": {
+          "category": "Review"
+        }
+      },
+      "file": "/skills/parallel-pr-review/SKILL.md",
+      "sha256": "56f1846fef02c4794d686b01d291146d498930cf85d6ca6175304b5e496d4ac9",
+      "source": {
+        "path": "skills/parallel-pr-review/SKILL.md",
+        "url": "https://github.com/amypellegrini/amypellegrini.github.io/blob/main/skills/parallel-pr-review/SKILL.md"
+      },
+      "install": "npx skills add amypellegrini/amypellegrini.github.io --skill parallel-pr-review",
+      "detail": "/library/skill--parallel-pr-review/"
+    },
+    {
+      "id": "skill--pickup-issue",
+      "name": "pickup-issue",
+      "kind": "skill",
+      "category": "Planning",
+      "runtime": "portable",
+      "description": "Prepare an issue for implementation by checking requirements, repository context, and a suitable working branch.",
+      "metadata": {
+        "name": "pickup-issue",
+        "description": "Prepare an issue for implementation by checking requirements, repository context, and a suitable working branch.",
+        "metadata": {
+          "category": "Planning"
+        }
+      },
+      "file": "/skills/pickup-issue/SKILL.md",
+      "sha256": "ce3547de671f0c939c243be747a371b47f0e856c574fe1e148e5243bd1be3fec",
+      "source": {
+        "path": "skills/pickup-issue/SKILL.md",
+        "url": "https://github.com/amypellegrini/amypellegrini.github.io/blob/main/skills/pickup-issue/SKILL.md"
+      },
+      "install": "npx skills add amypellegrini/amypellegrini.github.io --skill pickup-issue",
+      "detail": "/library/skill--pickup-issue/"
+    },
+    {
+      "id": "skill--project-lifecycle",
+      "name": "project-lifecycle",
+      "kind": "skill",
+      "category": "Planning",
+      "runtime": "portable",
+      "description": "Create, inspect, close, or reopen an iteration or project board using the target project’s own workflow.",
+      "metadata": {
+        "name": "project-lifecycle",
+        "description": "Create, inspect, close, or reopen an iteration or project board using the target project’s own workflow.",
+        "metadata": {
+          "category": "Planning"
+        }
+      },
+      "file": "/skills/project-lifecycle/SKILL.md",
+      "sha256": "c0b260d715ab8edc6f7aba2ad87fc50685986b096ebb7258102b5a6b19c15971",
+      "source": {
+        "path": "skills/project-lifecycle/SKILL.md",
+        "url": "https://github.com/amypellegrini/amypellegrini.github.io/blob/main/skills/project-lifecycle/SKILL.md"
+      },
+      "install": "npx skills add amypellegrini/amypellegrini.github.io --skill project-lifecycle",
+      "detail": "/library/skill--project-lifecycle/"
+    },
+    {
+      "id": "skill--qa",
+      "name": "qa",
+      "kind": "skill",
+      "category": "Quality",
+      "runtime": "portable",
+      "description": "Coordinate either a repository quality assessment or acceptance-criteria verification of a specific feature.",
+      "metadata": {
+        "name": "qa",
+        "description": "Coordinate either a repository quality assessment or acceptance-criteria verification of a specific feature.",
+        "metadata": {
+          "category": "Quality"
+        }
+      },
+      "file": "/skills/qa/SKILL.md",
+      "sha256": "a2cebec3d6aa59b6be0fe5ce36ce5ef51204db83995f4ad035be82efd1f80286",
+      "source": {
+        "path": "skills/qa/SKILL.md",
+        "url": "https://github.com/amypellegrini/amypellegrini.github.io/blob/main/skills/qa/SKILL.md"
+      },
+      "install": "npx skills add amypellegrini/amypellegrini.github.io --skill qa",
+      "detail": "/library/skill--qa/"
+    },
+    {
+      "id": "skill--qa-assessment",
+      "name": "qa-assessment",
+      "kind": "skill",
+      "category": "Quality",
+      "runtime": "portable",
+      "description": "Run a combined assessment of test strategy, CI coverage, and commit hooks, then consolidate actionable findings.",
+      "metadata": {
+        "name": "qa-assessment",
+        "description": "Run a combined assessment of test strategy, CI coverage, and commit hooks, then consolidate actionable findings.",
+        "metadata": {
+          "category": "Quality"
+        }
+      },
+      "file": "/skills/qa-assessment/SKILL.md",
+      "sha256": "ba2904bfb585c4565e5139801ddd0292d606327de84c02ae47b54bfd223d06a0",
+      "source": {
+        "path": "skills/qa-assessment/SKILL.md",
+        "url": "https://github.com/amypellegrini/amypellegrini.github.io/blob/main/skills/qa-assessment/SKILL.md"
+      },
+      "install": "npx skills add amypellegrini/amypellegrini.github.io --skill qa-assessment",
+      "detail": "/library/skill--qa-assessment/"
+    },
+    {
+      "id": "skill--qa-test",
+      "name": "qa-test",
+      "kind": "skill",
+      "category": "Quality",
+      "runtime": "portable",
+      "description": "Verify a feature against its acceptance criteria on the actual implementation and record reproducible evidence.",
+      "metadata": {
+        "name": "qa-test",
+        "description": "Verify a feature against its acceptance criteria on the actual implementation and record reproducible evidence.",
+        "metadata": {
+          "category": "Quality"
+        }
+      },
+      "file": "/skills/qa-test/SKILL.md",
+      "sha256": "df39ea85238893944cc969bce29b0c761e1a6987a3f16ab2787b82a2991427ff",
+      "source": {
+        "path": "skills/qa-test/SKILL.md",
+        "url": "https://github.com/amypellegrini/amypellegrini.github.io/blob/main/skills/qa-test/SKILL.md"
+      },
+      "install": "npx skills add amypellegrini/amypellegrini.github.io --skill qa-test",
+      "detail": "/library/skill--qa-test/"
+    },
+    {
+      "id": "skill--release-notes",
+      "name": "release-notes",
+      "kind": "skill",
+      "category": "Delivery",
+      "runtime": "portable",
+      "description": "Draft release notes from a verified release scope for the intended audience and distribution channel.",
+      "metadata": {
+        "name": "release-notes",
+        "description": "Draft release notes from a verified release scope for the intended audience and distribution channel.",
+        "metadata": {
+          "category": "Delivery"
+        }
+      },
+      "file": "/skills/release-notes/SKILL.md",
+      "sha256": "157ba2cb51461b768f3985ace566eb94c64a3ee01d8fae34c30bd0fa54b59aae",
+      "source": {
+        "path": "skills/release-notes/SKILL.md",
+        "url": "https://github.com/amypellegrini/amypellegrini.github.io/blob/main/skills/release-notes/SKILL.md"
+      },
+      "install": "npx skills add amypellegrini/amypellegrini.github.io --skill release-notes",
+      "detail": "/library/skill--release-notes/"
+    },
+    {
+      "id": "skill--sign-off",
+      "name": "sign-off",
+      "kind": "skill",
+      "category": "Review",
+      "runtime": "portable",
+      "description": "Guide a human acceptance review of a specific build and record explicit criterion-level decisions.",
+      "metadata": {
+        "name": "sign-off",
+        "description": "Guide a human acceptance review of a specific build and record explicit criterion-level decisions.",
+        "metadata": {
+          "category": "Review"
+        }
+      },
+      "file": "/skills/sign-off/SKILL.md",
+      "sha256": "0eee7d0793d7a354e2c7ac113403ece72d30cb93568a3693e3daad38cfdebbfd",
+      "source": {
+        "path": "skills/sign-off/SKILL.md",
+        "url": "https://github.com/amypellegrini/amypellegrini.github.io/blob/main/skills/sign-off/SKILL.md"
+      },
+      "install": "npx skills add amypellegrini/amypellegrini.github.io --skill sign-off",
+      "detail": "/library/skill--sign-off/"
+    },
+    {
+      "id": "skill--tdd",
+      "name": "tdd",
+      "kind": "skill",
+      "category": "Development",
+      "runtime": "portable",
+      "description": "Implement one acceptance criterion through a verified red, green, and refactor cycle using the project’s test tools.",
+      "metadata": {
+        "name": "tdd",
+        "description": "Implement one acceptance criterion through a verified red, green, and refactor cycle using the project’s test tools.",
+        "metadata": {
+          "category": "Development"
+        }
+      },
+      "file": "/skills/tdd/SKILL.md",
+      "sha256": "0898848ff6a788d4d1d59e4261e982ab8bd2b144930c2eb29ef0d3d29f388204",
+      "source": {
+        "path": "skills/tdd/SKILL.md",
+        "url": "https://github.com/amypellegrini/amypellegrini.github.io/blob/main/skills/tdd/SKILL.md"
+      },
+      "install": "npx skills add amypellegrini/amypellegrini.github.io --skill tdd",
+      "detail": "/library/skill--tdd/"
+    },
+    {
+      "id": "agent--dev",
+      "name": "dev",
+      "kind": "agent",
+      "category": "Orchestration",
+      "runtime": "claude-code",
+      "description": "Coordinate scoped feature development and return validated, reviewable changes without assuming a particular repository or stack.",
+      "metadata": {
+        "name": "dev",
+        "description": "Coordinate scoped feature development and return validated, reviewable changes without assuming a particular repository or stack."
+      },
+      "file": "/agents/dev.md",
+      "sha256": "44b64182d3ad8a8e779c4f71f48aceff5fa6ceb07618ddadcd6e65427ff0f838",
+      "source": {
+        "path": "agents/dev.md",
+        "url": "https://github.com/amypellegrini/amypellegrini.github.io/blob/main/agents/dev.md"
+      },
+      "install": null,
+      "detail": "/library/agent--dev/"
+    },
+    {
+      "id": "agent--qa",
+      "name": "qa",
+      "kind": "agent",
+      "category": "Orchestration",
+      "runtime": "claude-code",
+      "description": "Assess repository quality or verify feature behavior with reproducible evidence while leaving implementation code unchanged.",
+      "metadata": {
+        "name": "qa",
+        "description": "Assess repository quality or verify feature behavior with reproducible evidence while leaving implementation code unchanged."
+      },
+      "file": "/agents/qa.md",
+      "sha256": "3255ac17dd9b320ecf66b862c9139184b8d6742c4c40fdacca88098573f7210e",
+      "source": {
+        "path": "agents/qa.md",
+        "url": "https://github.com/amypellegrini/amypellegrini.github.io/blob/main/agents/qa.md"
+      },
+      "install": null,
+      "detail": "/library/agent--qa/"
+    }
+  ]
+}

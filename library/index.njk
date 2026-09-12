@@ -1,0 +1,49 @@
+---
+layout: default
+title: Amy Pellegrini’s workflow, still evolving
+permalink: /library/
+---
+<link rel="stylesheet" href="/library/library.css">
+<main class="library container" id="main-content">
+  <header class="library-hero">
+    <p class="library-eyebrow">AMY PELLEGRINI’S WORKFLOW <span> / </span> SKILLS & AGENTS</p>
+    <h1>Amy Pellegrini’s workflow.<br><em>Still evolving.</em></h1>
+    <div class="library-intro"><p>These are the skills and agents I use in my own development workflow. I’m sharing them in case they’re useful to you, too. There are rough edges, and I keep refining them as I learn what works. Feel free to borrow, adapt, and make them your own.</p><a class="library-button" href="#install">Install a skill <span aria-hidden="true">↗</span></a></div>
+    <div class="library-stats"><span><strong>{{ library.skillCount }}</strong> reusable skills</span><span><strong>{{ library.agentCount }}</strong> agent definitions</span><span><strong>{{ library.categories.length }}</strong> categories</span><span><strong>Any</strong> repository</span></div>
+  </header>
+  <section class="library-catalog" aria-labelledby="catalog-title">
+    <div class="library-section-heading"><div><p class="library-eyebrow">01 / EXPLORE</p><h2 id="catalog-title">The library</h2></div><a href="/registry/index.json">JSON registry ↗</a></div>
+    <p class="library-note">One maintained definition per workflow. Skills discover your project’s tools and conventions; agent definitions provide optional Claude Code orchestration.</p>
+    <form class="library-filters" role="search" id="library-filters" hidden>
+      <label class="library-search">Search the library<input type="search" id="search" name="q" placeholder="Try testing, review, or commit…"></label>
+      <label>Category<select id="category" name="category"><option value="">All categories</option>{% for category in library.categories %}<option value="{{ category | lower }}">{{ category }}</option>{% endfor %}</select></label>
+      <label>Type<select id="kind" name="kind"><option value="">Skills & agents</option><option value="skill">Skills</option><option value="agent">Agents</option></select></label>
+      <label>Format<select id="runtime" name="runtime"><option value="">All formats</option><option value="claude-code">Claude Code agents</option><option value="portable">Portable skills</option></select></label>
+    </form>
+    <div class="library-results"><p id="result-count" role="status">{{ library.entries.length }} entries</p><button type="button" class="library-reset" id="reset-filters" hidden>Clear filters</button></div>
+    <div class="library-grid">
+      {% for entry in library.entries %}
+      <article class="library-card" data-category="{{ entry.category | lower }}" data-kind="{{ entry.kind }}" data-runtime="{{ entry.runtime }}" data-search="{{ (entry.name + ' ' + entry.description + ' ' + entry.category + ' ' + entry.runtime) | lower | escape }}">
+        <div class="library-card-top"><span class="library-type {{ entry.kind }}">{{ entry.kind }}</span><span>{{ entry.runtime }}</span></div>
+        <h3><a href="{{ entry.detail }}">{{ entry.name }} <span aria-hidden="true">↗</span></a></h3>
+        <p>{{ entry.shortDescription | skillInline | safe }}</p>
+        <div class="library-card-bottom"><span>{{ entry.category }}</span><a href="{{ entry.detail }}">{{ 'Install & read' if entry.kind == 'skill' else 'Setup & read' }} →</a></div>
+      </article>
+      {% endfor %}
+    </div>
+    <div id="empty-state" class="library-empty" hidden><h3>No matching entries</h3><p>Try a broader search or clear the filters.</p></div>
+  </section>
+  <section id="install" class="library-install" aria-labelledby="install-title">
+    <p class="library-eyebrow">02 / MAKE IT YOURS</p><h2 id="install-title">From this library<br>to your workflow.</h2>
+    <p>Use Vercel’s <a href="https://github.com/vercel-labs/skills">Skills CLI</a> with Node.js and npm installed. Run commands inside the project where you want the skill. These commands target the published library repository; use the local path below before publication.</p>
+    <ol class="library-steps">
+      <li><h3>Browse the available skills</h3><p>Preview the library before installing a skill. This lists the skills available in the library.</p><div class="library-command"><pre><code>npx skills add amypellegrini/amypellegrini.github.io --list</code></pre><button type="button" data-copy>Copy</button></div></li>
+      <li><h3>Install the skill you need</h3><p>Each entry has a command. Choose a target with <code>--agent claude-code</code>, <code>--agent codex</code>, or <code>--agent pi</code>, or use the interactive selection. Add <code>--global</code> for your user account; omit it for the current project.</p><div class="library-command"><pre><code>npx skills add amypellegrini/amypellegrini.github.io --skill tdd --agent claude-code</code></pre><button type="button" data-copy>Copy</button></div></li>
+      <li><h3>Check your installation</h3><p>List installed skills, or use <code>npx skills update</code> to update them later.</p><div class="library-command"><pre><code>npx skills list</code></pre><button type="button" data-copy>Copy</button></div></li>
+    </ol>
+    <div class="library-callout"><h3>Working from a local checkout?</h3><p>From the root of this website repository, you can preview the maintained skills without publishing:</p><div class="library-command"><pre><code>npx skills add ./skills --list</code></pre><button type="button" data-copy>Copy</button></div></div>
+    <div class="library-guide-grid"><div><h3>Skills and agents are different</h3><p>The CLI installs <code>SKILL.md</code> packages. Claude Code agent definitions belong in your project’s <code>.claude/agents/</code> directory. Open an agent entry to download its file and see its destination. Installing the dev or qa skill does not also install its agent.</p></div><div><h3>Adapts to your project</h3><p>Skills discover the repository, default branch, test commands, tracker, and workflow states from your project. Boards, devices, and companion agents are optional unless the task needs them. Install only the workflows you use; each includes a fallback when a companion skill is absent.</p></div></div>
+  </section>
+  <section class="library-sources" aria-labelledby="sources-title"><p class="library-eyebrow">03 / MAINTAINED TOGETHER</p><h2 id="sources-title">Your repository.<br>Your conventions.</h2><p>These workflows make no assumptions about your organization, product, programming language, branch names, or board columns. They preserve the useful discipline: focused changes, evidence-backed testing, clear review, and explicit human acceptance.</p><div class="library-source-grid"><article><h3>Editable skills</h3><p>Each <code>skills/&lt;name&gt;/SKILL.md</code> is a self-contained workflow. Edit it here, or adapt an installed copy to your project.</p></article><article><h3>Optional agents</h3><p>The dev and qa definitions coordinate workflows in Claude Code. Portable skills can also run directly without these agents.</p></article><article><h3>Inspectable registry</h3><p>The <a href="/registry/index.json">JSON registry</a> records categories, file paths, SHA-256 checksums, source links, and install commands.</p></article></div><p class="library-note">Definitions are maintained in this library. Refreshing the registry indexes those files; it never re-imports instructions from another project.</p></section>
+</main>
+<script src="/library/library.js" defer></script>

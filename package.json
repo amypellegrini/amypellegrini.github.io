@@ -7,12 +7,15 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1"
+    "@11ty/eleventy": "^2.0.1",
+    "js-yaml": "3.14.2",
+    "markdown-it": "13.0.2"
   },
   "scripts": {
-    "build": "eleventy",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "eleventy --serve"
+    "build": "node scripts/sync-library.cjs && node scripts/clean-site.cjs && eleventy",
+    "test": "node --test scripts/library.test.cjs",
+    "dev": "eleventy --serve",
+    "library:sync": "node scripts/sync-library.cjs"
   },
   "repository": {
     "type": "git",
