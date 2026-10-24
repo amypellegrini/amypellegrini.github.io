@@ -10,6 +10,7 @@ module.exports = function (eleventyConfig) {
       }
     }
   });
+  eleventyConfig.addShortcode("year", () => String(new Date().getFullYear()));
   eleventyConfig.addFilter("skillMarkdown", value => markdown.render(value));
   eleventyConfig.addFilter("skillInline", value => markdown.renderInline(value));
   eleventyConfig.addPassthroughCopy("registry");

@@ -70,3 +70,5 @@ The worst thing you can do when dealing with a micromanager is letting them eat 
 
   </div>
 </article>
+
+{% include "article-signature.html" %}
